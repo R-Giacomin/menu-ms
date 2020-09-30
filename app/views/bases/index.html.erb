@@ -1,6 +1,3 @@
-
-<h1>Meus Dados de Saúde</h1>
-
 <div class="row">
     <div class="col-sm-8 offset-sm-2">
       <div id="movies">
@@ -13,18 +10,29 @@
 
 <div class="container mt-5">
 
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="..." class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="container">
+  <div class="row">
+    <% @bases.each do |base| %>
+      <div class="col-sm-6">
+        <div class="p-3">
+          <div class="card" style="width: 100%;">
+            <%# <img src=image_tag "CMD.png" class="card-img-top" alt="..."> %>
+            <%= image_tag "CMD.png" %>
+            <div class="card-body">
+              <h5 class="card-title"><%= base.name %></h5>
+              <p class="card-text"><%= base.description %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= base.legal_base %></li>
+              <li class="list-group-item"><%= base.technical_area %></li>
+              <li class="list-group-item"><%= base.user.name %></li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Conheça as variáveis desse banco</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
-</div>
 </div>
