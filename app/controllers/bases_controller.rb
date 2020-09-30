@@ -30,3 +30,5 @@ class BasesController < ApplicationController
     #Vamos colocar uma foto/logo da base?
   end
 end
+
+validates name, description, finality, data_base_sharing, data_base_name, presence: true
