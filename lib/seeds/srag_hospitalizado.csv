@@ -1,0 +1,141 @@
+nome;Descrição;categoria;sensibilidade
+NU_NOTIFIC;Número do registro;aberto;não
+DT_NOTIFIC;Data de preenchimento da ficha de notificação.;aberto;não
+SEM_NOT;Semana Epidemiológica do preenchimento da ficha de notificação.;aberto;não
+DT_SIN_PRI;Data de 1º sintomas do caso de SRAG.;aberto;não
+SEM_PRI;Semana Epidemiológica do início dos sintomas.;aberto;não
+SG_UF_NOT;Unidade Federativa onde está localizada a Unidade Sentinela que realizou a notificação.;aberto;não
+ID_MUNICIP OU CO_MUN_NOT;Município onde está localizada a Unidade Sentinela que realizou a notificação.;aberto;não
+ID_REGIONA OU CO_REGIONA;Regional de Saúde onde está localizado o Município realizou a notificação.;aberto;não
+ID_UNIDADE OU CO_UNI_NOT;Unidade Sentinela que realizou o atendimento, coleta de amostra e registro do caso.;aberto;não
+NU_CPF;Número do Cadastro de Pessoa Física (CPF) do paciente notificado;identificado;não
+NM_PACIENT;Nome completo do paciente (sem abreviações);identificado;não
+CS_SEXO;Sexo do paciente.;aberto;não
+DT_NASC;Data de nascimento do paciente.;aberto;não
+NU_IDADE_N;Idade informada pelo paciente quando não se sabe a data de nascimento. Na falta desse dado é registrada a idade aparente.;aberto;não
+TP_IDADE;;aberto;não
+CS_GESTANT;Idade gestacional da paciente.;aberto;não
+CS_RACA;Cor ou raça declarada pelo paciente: Branca, Preta, Amarela, Parda (pessoa que se declarou mulata, cabocla, cafuza, mameluca ou mestiça de preto com pessoa de outra cor ou raça), e, Indígena.;aberto;não
+CS_ETINIA;Nome e código da etnia do paciente, quando indígena.;aberto;não
+CS_ESCOL_N;Nível de escolaridade;aberto;não
+PAC_COCBO ou PAC_DSCBO;Ocupação profissional do paciente;aberto;não
+NM_MAE_PAC;Nome completo da mãe do paciente (sem abreviações).;identificado;não
+NU_CEP;CEP de residência do paciente.;identificado;sim
+SG_UF;Unidade Federativa de residência do paciente.;aberto;não
+ID_RG_RESI OU CO_RG_RESI;Regional de Saúde onde está localizado o Município de residência do paciente.;aberto;não
+ID_MN_RESI OU CO_MUN_RES;Município de residência do paciente.;aberto;não
+NM_BAIRRO;Bairro de residência do paciente.;aberto;não
+NM_LOGRADO;Logradouro (rua, avenida, quadra, travessa, etc.) do endereço de residência do paciente.;identificado;sim
+NU_NUMERO;Nº do logradouro (nº da casa ou do edifício).;identificado;sim
+NM_COMPLEM;Complemento do logradouro (bloco, apto, casa, etc.).;identificado;sim
+NU_DDD_TEL OU NU_TELEFON;Código DDD e número de telefone para contato do paciente.;identificado;sim
+CS_ZONA;Zona geográfica do endereço de residência do paciente.;aberto;não
+ID_PAIS OU CO_PAIS;País de residência do paciente.;aberto;não
+HISTO_VGM;;aberto;não
+PAIS_VGM OU CO_PS_VGM;País onde foi realizada a viagem;aberto;não
+LO_PS_VGM;Local (cidade, estado,;aberto;não
+DT_VGM;Data em que foi realizada a viagem;aberto;não
+DT_RT_VGM;Data em que retornou de viagem;aberto;não
+SURTO_SG;Caso é proveniente de surto de SG?;aberto;não
+NOSOCOMIAL;Caso de SRAG com infecção adquirida após internação.;aberto;não
+AVE_SUINO;Caso com contato direto com aves ou suínos.;aberto;não
+FEBRE;Paciente apresentou febre?;aberto;não
+TOSSE;Paciente apresentou tosse?;aberto;não
+GARGANTA;Paciente apresentou dor de garganta?;aberto;não
+DISPNEIA;Paciente apresentou dispneia?;aberto;não
+DESC_RESP;Paciente apresentou desconforto respiratório?;aberto;não
+SATURACAO;Paciente apresentou;aberto;não
+DIARREIA;Paciente apresentou diarreia?;aberto;não
+VOMITO;Paciente apresentou vômito?;aberto;não
+OUTRO_SIN;Paciente apresentou outro(s) sintoma(s)?;aberto;não
+OUTRO_DES;Listar outros sinais e sintomas apresentados pelo paciente.;aberto;não
+PUERPERA;Paciente é puérpera ou parturiente (mulher que pariu recentemente – até 45 dias do parto)?;aberto;não
+CARDIOPATI;Paciente possui Doença Cardiovascular Crônica?;aberto;não
+HEMATOLOGI;Paciente possui Doença Hematológica Crônica?;aberto;não
+SIND_DOWN;Paciente possui Síndrome de Down?;aberto;não
+HEPATICA;Paciente possui Doença Hepática Crônica?;aberto;não
+ASMA;Paciente possui Asma?;aberto;não
+DIABETES;Paciente possui Diabetes mellitus?;aberto;não
+NEUROLOGIC;Paciente possui;aberto;não
+PNEUMOPATI;Paciente possui outra pneumopatia crônica?;aberto;não
+IMUNODEPRE;Paciente possui Imunodeficiência  ou Imunodepressão (diminuição da função do sistema imunológico)?;aberto;não
+RENAL;Paciente possui Doença Renal Crônica?;aberto;não
+OBESIDADE;Paciente possui obesidade?;aberto;não
+OBES_IMC;Valor do IMC (Índice de Massa Corporal) do paciente calculado  pelo profissional de saúde.;aberto;não
+OUT_MORBI;Paciente possui outro(s) fator(es) de risco?;aberto;não
+MORB_DESC;Listar outro(s) fator(es) de risco do paciente.;aberto;não
+VACINA;Informar se o paciente foi vacinado contra gripe na última campanha, após verificar a documentação / caderneta. Caso o paciente não tenha a caderneta, direcionar a pergunta para ele ou;aberto;não
+DT_UT_DOSE;Data da última dose de vacina contra gripe que o paciente tomou.;aberto;não
+MAE_VAC;Se paciente < 6 meses, a mãe recebeu vacina?;aberto;não
+DT_VAC_MAE;Se a mãe recebeu vacina, qual a data?;aberto;não
+M_AMAMENTA;Se paciente < 6 meses, a mãe amamenta a criança?;aberto;não
+DT_DOSEUNI;Se >= 6 meses e <= 8 anos, data da dose única para crianças vacinadas em campanhas de anos anteriores;aberto;não
+DT_1_DOSE;Se >= 6 meses e <= 8 anos, data da 1ª dose para crianças vacinadas pela primeira vez;aberto;não
+DT_2_DOSE;Se >= 6 meses e <= 8 anos data da 2ª dose;aberto;não
+ANTIVIRAL;Fez uso de antiviral para tratamento da doença?;aberto;não
+TP_ANTIVIR;Qual antiviral utilizado?;aberto;não
+OUT_ANTIV;Se o antiviral utilizado não foi Oseltamivir ou Zanamivir, informar qual antiviral foi utilizado.;aberto;não
+DT_ANTIVIR;Data em que foi iniciado o tratamento com o antiviral.;aberto;não
+HOSPITAL;O paciente foi internado?;aberto;não
+DT_INTERNA;Data em que o paciente foi hospitalizado.;aberto;não
+SG_UF_INTE;Unidade Federativa de internação do paciente.;aberto;não
+ID_RG_INTE OU CO_RG_INTE;Regional de Saúde onde está localizado o Município de internação do paciente.;aberto;não
+ID_MN_INTE OU CO_MU_INTE;Município onde está localizado a Unidade de Saúde onde o paciente internou.;aberto;não
+ID_UN_INTE OU CO_UN_INTE;Unidade Sentinela que realizou a internação do paciente.;aberto;não
+UTI;O paciente foi internado em UTI?;aberto;não
+DT_ENTUTI;Data de entrada do paciente na unidade de Terapia intensiva (UTI).;aberto;não
+DT_SAIDUTI;Data em que o paciente saiu da Unidade de Terapia intensiva (UTI).;aberto;não
+SUPORT_VEN;O paciente fez uso de suporte ventilatório?;aberto;não
+RAIOX_RES;Informar resultado de Raio X de Tórax.;aberto;não
+RAIOX_OUT;Informar o resultado do RX de tórax se selecionado a opção 5- Outro.;aberto;não
+DT_RAIOX;Se realizou RX de Tórax, especificar a data do exame.;aberto;não
+AMOSTRA;Foi realizado coleta de amostra para realização de teste diagnóstico?;aberto;não
+DT_COLETA;Data da coleta da amostra para realização do teste diagnóstico.;aberto;não
+TP_AMOSTRA;Tipo da amostra clínica coletada para o teste diagnóstico.;aberto;não
+OUT_AMOST;Descrição do tipo da amostra clínica, caso diferente das listadas nas categorias do campo.;aberto;não
+REQUI_GAL;Número da requisição de exames gerado pelo sistema GAL.;aberto;não
+IF_RESUL;Resultado do teste de Imunofluorescência (IF) ou outro método que não seja Biologia Molecular. (Poderão ser preenchidos com resultados de teste rápido que não seja por Biologia Molecular;aberto;não
+DT_IF;Data do resultado diagnóstico da IF ou outro método que não seja Biologia Molecular. (Poderão ser preenchidos com resultados de teste rápido que não seja;aberto;não
+POS_IF_FLU;Resultado da IF/outro método que não seja Biologia Molecular que foi positivo para Influenza;aberto;não
+TP_FLU_IF;Resultado diagnóstico da IF/outro método que não seja Biologia Molecular que para o tipo de Influenza.;aberto;não
+POS_IF_OUT;Resultado da IF/outro método que não seja Biologia Molecular que foi positivo para outro vírus respiratório;aberto;não
+IF_VSR;Resultado diagnóstico da IF/outro método que não seja Biologia Molecular que para VSR.;aberto;não
+IF_PARA1;Resultado diagnóstico da IF/outro método que não seja Biologia Molecular que para Parainfluenza 1.;aberto;não
+IF_PARA2;Resultado diagnóstico da IF/outro método que não seja Biologia Molecular que para Parainfluenza 2.;aberto;não
+IF_PARA3;Resultado diagnóstico da IF/outro método que não seja Biologia Molecular que para Parainfluenza 3.;aberto;não
+IF_ADENO;Resultado diagnóstico da IF/outro método que não seja Biologia Molecular que para;aberto;não
+IF_OUTRO;Resultado diagnóstico da IF/outro método que não seja Biologia Molecular que para Outro vírus respiratório.;aberto;não
+DS_IF_OUT;Nome do outro vírus respiratório identificado pela IF/outro método que não seja Biologia Molecular que.;aberto;não
+LAB_IF OU CO_LAB_IF;Laboratório responsável pela liberação do resultado do teste diagnóstico (IF/outro método que não seja Biologia Molecular) da amostra do paciente.;aberto;não
+PCR_RESUL;Resultado do teste de RT-PCR/outro método por Biologia Molecular.;aberto;não
+DT_PCR;Data do Resultado RT- PCR/outro método por Biologia Molecular;aberto;não
+POS_PCRFLU;Resultado da RT-PCR foi positivo para Influenza;aberto;não
+TP_FLU_PCR;Resultado diagnóstico do RT-PCR para o tipo de Influenza.;aberto;não
+PCR_FLUASU;Subtipo para Influenza A.;aberto;não
+FLUASU_OUT;Outro subtipo para Influenza A.;aberto;não
+PCR_FLUBLI;Linhagem para Influenza B.;aberto;não
+FLUBLI_OUT;Outra linhagem para Influenza B.;aberto;não
+POS_PCROUT;Resultado da RT-PCR foi positivo para outro vírus respiratório;aberto;não
+PCR_SARS2;Resultado diagnóstico do RT-PCR para (SARS- CoV-2).;aberto;não
+PCR_VSR;Resultado diagnóstico do RT-PCR para (VSR).;aberto;não
+PCR_PARA1;Resultado diagnóstico do RT-PCR para;aberto;não
+PCR_PARA2;Resultado diagnóstico do RT-PCR para Parainfluenza 2.;aberto;não
+PCR_PARA3;Resultado diagnóstico do RT-PCR para Parainfluenza 3.;aberto;não
+PCR_PARA4;Resultado diagnóstico do RT-PCR para Parainfluenza 4.;aberto;não
+PCR_ADENO;Resultado diagnóstico do RT-PCR para Adenovírus.;aberto;não
+PCR_METAP;Resultado diagnóstico do RT-PCR para Metapneumovírus.;aberto;não
+PCR_BOCA;Resultado diagnóstico do RT-PCR para Bocavírus.;aberto;não
+PCR_RINO;Resultado diagnóstico do RT-PCR para Rinovírus.;aberto;não
+PCR_OUTRO;Resultado diagnóstico do RT-PCR para Outro;aberto;não
+DS_PCR_OUT;Nome do outro vírus respiratório identificado pelo RT- PCR.;aberto;não
+LAB_PCR OU CO_LAB_PCR;Laboratório responsável pela liberação do resultado do teste diagnóstico (RT-PCR) da amostra do paciente.;aberto;não
+CLASSI_FIN;Diagnóstico final do caso. No caso de co- infecção, priorizar o resultado de Influenza para a Classificação Final. Se tiver resultados divergentes entre IFI e RT-PCR, priorizar o resultado do RT-PCR.;aberto;não
+CLASSI_OUT;Descrição de qual outro agente etiológico foi identificado;aberto;não
+CRITERIO;Indicar qual o critério de confirmação.;aberto;não
+EVOLUCAO;Evolução do caso;aberto;não
+DT_EVOLUCA;Data da alta ou óbito;aberto;não
+DT_ENCERRA;Data do encerramento do caso.;aberto;não
+OBSERVA;Outras observações sobre o paciente consideradas pertinentes.;aberto;não
+NOME_PROF;Nome completo do profissional de saúde (sem abreviações) responsável pela notificação.;aberto;não
+REG_PROF;Número do conselho ou matrícula do profissional de saúde responsável pela notificação (Ex: CRM/RJ 1234);aberto;não
+DT_DIGITA;Data de inclusão do registro no sistema.;aberto;não
