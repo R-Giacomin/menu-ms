@@ -1,0 +1,17 @@
+Nome do campo;Descrição;categoria;sensibilidade
+Latitude;"Representa a latitude em formato decimal. Considerar valores negativos.
+O sistema de referência espacial é o EPSG:4326.";aberto;não
+Longitude;"Representa a longitude em formato decimal. Considerar valores negativos.
+O sistema de referência espacial é o EPSG:4326.";aberto;não
+Código do Município;Representa o código IBGE do município.;aberto;não
+"
+Código CNES";Representa o código CNES;aberto;não
+Nome do Estabelecimento;Representa o nome do estabelecimento.;aberto;não
+Endereço;Representa o endereço da unidade.;aberto;não
+Bairro;Representa o nome do Bairro.;aberto;não
+Cidade;Representa o nome da cidade;aberto;não
+Telefone;Representa o número do telefone;aberto;não
+Situação em relação a estrutura física e ambiência;Informa a situação em relação a estrutura física e ambiência;aberto;não
+Situação em relação a adaptações para deficientes e idosos;Informa a situação em relação a adaptações para deficientes e idosos;aberto;não
+Situação em relação aos equipamentos;Informa a situação em relação aos equipamentos;aberto;não
+Situação em relação aos Medicamentos;Informa a Situação em relação aos medicamentos;aberto;não
