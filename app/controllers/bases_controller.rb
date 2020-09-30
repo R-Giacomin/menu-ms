@@ -31,4 +31,4 @@ class BasesController < ApplicationController
   end
 end
 
-validates name, description, finality, data_base_sharing, data_base_name, presence: true
+
