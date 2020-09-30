@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="search text-center">
+    <%= form_tag bases_path, :method => "get" do %>
+      <%= text_field_tag :search, params[:search],
+      placeholder: "Procure por um termo" %>
+      <%= submit_tag("Buscar", :name => nil, class: "btn btn-warning") %>
+    <% end %>
+  </div>
+</div>
+

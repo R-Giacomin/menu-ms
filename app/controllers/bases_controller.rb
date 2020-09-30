@@ -1,8 +1,13 @@
 class BasesController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @bases = Base.all
+    if params[:search].present?
+      @bases = Base.search(params[:search])
+    else
+      @bases = Base.all
+    end
   end
 
   def show
