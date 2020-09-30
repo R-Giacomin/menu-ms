@@ -99,7 +99,11 @@ GEM
       railties (>= 3.2)
     erubi (1.9.0)
     execjs (2.7.0)
+<<<<<<< HEAD
+    faker (2.14.0)
+=======
     faker (2.13.0)
+>>>>>>> f25758f24ec6679f4cedfede4630ef2ab589f5dc
       i18n (>= 1.6, < 2)
     ffi (1.13.1)
     font-awesome-sass (5.13.0)
