@@ -34,6 +34,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'cpf_faker'
 gem 'faker'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'pry-byebug'
