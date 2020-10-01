@@ -2,6 +2,7 @@
 <ul>
   <
   <% @orders.each do |order| %>
+    <li><%= order.inspect %></li>
     <li>Situação: <%= order.status %></li>
     <li>Justificativa: <%= order.justify %> </li>
     <li>Status: <%= order.category %> </li>
