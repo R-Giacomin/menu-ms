@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   resources :bases
 
+  resources :orders, only: [:index, :show]
+
   root to: 'pages#home'
 end
