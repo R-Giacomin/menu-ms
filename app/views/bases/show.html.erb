@@ -1,0 +1,21 @@
+<h2 class="mt-5"><%= @base.name %></h2>
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Variável</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Sensibilidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @base.variables.each do |variable| %>
+      <tr>
+        <th scope="row"><%= variable.name %></th>
+        <td><%=  variable.description %></td>
+        <td><%=  variable.category %></td>
+        <td>@<%=  variable.sensibility %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

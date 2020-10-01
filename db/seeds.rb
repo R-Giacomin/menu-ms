@@ -1,6 +1,8 @@
+
 require 'csv'
 require 'faker'
 require 'cpf_faker'
+require_relative 'seed_aux.rb'
 
 Variable.destroy_all
 Base.destroy_all
@@ -32,8 +34,49 @@ end
   user = User.create!(email: "user#{i}@test.com", password: '123456', name: Faker::Name.name, cpf: Faker::CPF.numeric )
 end
 
+puts "Alimentando o banco com pedidos..."
+User.all.each do |usr|
+  feed_order(usr)
+end
+
+puts "Alimentando os pedidos com itens..."
+feed_item
 
 puts "Número de variáveis criadas: #{Variable.count}"
 puts "Número de bases criadas: #{Base.count}"
 puts "Número de usuários criados: #{User.count}"
+puts "Número de Pedidos criados: #{Order.count}"
+puts "Número de Itens criados: #{Item.count}"
 
+
+
+
+
+# Seed Gabi e Fabi - FAVOR NÃO APAGAR!
+# require 'faker'
+
+# puts 'Cleaning DB'
+# Variable.destroy_all
+# Base.destroy_all
+# User.destroy_all
+# puts 'DB cleaned'
+
+# puts 'Creating users'
+
+# 10.times do |i|
+#   user = User.create!(email: "test#{i}@test.com", password: '123123', cpf: '000', manager: true )
+#   puts 'Creating bases'
+#   2.times do
+#     base = Base.create!(name: Faker::Name.name, description: Faker::Quote.famous_last_words,
+#     legal_base: 'Execução de Políticas Públicas', technical_area: 'Secretaria de Atenção à Saúde',
+#     user_id: user.id)
+
+#     puts 'Creating variables'
+#     20.times do
+#       variable = Variable.create!(name: Faker::Food.fruits, description: Faker::Food.description,
+#       category: 'cadastral', sensibility: 'sensível', base_id: base.id)
+#     end
+#   end
+# end
+
+# puts 'Parabéns!'
