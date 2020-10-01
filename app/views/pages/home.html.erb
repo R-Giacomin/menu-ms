@@ -1,3 +1,13 @@
+<div class="banner" style="background-image: url('<%= image_path 'Banner.jpeg' %>')">
+  <div class="banner-content">
+  <hr>
+    <h1>Meus Dados de Saúde</h1>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+  </div>
+</div>
+
 <div class="container">
   <div class="search text-center">
     <%= form_tag bases_path, :method => "get" do %>
@@ -8,13 +18,48 @@
   </div>
 </div>
 
-<div class="banner" style="background-image: url('<%= image_path 'Banner.jpeg' %>')">
-  <div class="banner-content">
-  <hr>
-    <h1>Meus Dados de Saúde</h1>
-    <p>
-      <span id="banner-typed-text"></span>
-    </p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+
+    <div class="tab-content" id="myTabContent">
+      <div class="container tab-pane fade show active" id="cidadao" role="tabpanel" aria-labelledby="cidadao-tab">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center ">
+              <a href="">
+                <img src="icon1.png" width="105" alt="Ícone de Definição 1">
+                  <h2>O que são dados de saúde?</h2>
+                  <p>São dados relativos ao seu estado de saúde, 
+                  que revelem informações sobre a sua saúde física ou mental, 
+                  no passado, presente ou futuro. 
+                  </p>
+              </a>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center  ">
+            <a href="">
+                <img src="icon2.png" width="105" alt="Ícone de Definição 2">
+                <h2>O que é tratamento de dados?</h2>
+                <p>É toda operação realizada com dados pessoais de saúde, 
+                desde a coleta até a sua disponibilização, com propósitos
+                legítimos, específicos, explícitos e informados ao titular de dados.
+                </p>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center ">
+              <a href="">
+                  <img src="images/icon3.png" width="105" alt="Ícone de Definição 3">
+                  <h2>Onde estão meus dados de saúde?</h2>
+                  <p>Dados encaminhados ao Ministério da Saúde 
+                  estão armazenados em Bases Nacionais de Dados em Saúde. 
+                  </p>
+              </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
