@@ -19,12 +19,30 @@ CSV.foreach(csv_text, csv_options) do |row|
   variable = Variable.create!(name: row[0], description: row[1], category: row[2], base: base)
 end
 
-manager2 = User.create!(email: "manager2@test.com", password: '123456', name: Faker::Name.name, cpf: Faker::CPF.numeric, manager: true )
-
-base = Base.create!(name: "Unidades Básicas de Saúde - UBS", description: "As Unidades Básicas de Saúde (UBS) são a porta de entrada preferencial do Sistema Único de Saúde (SUS). O objetivo desses postos é atender até 80% dos problemas de saúde da população, sem que haja a necessidade de encaminhamento para hospitais.", legal_base: "Lei 1111/2019", technical_area: "Secretaria de Atenção Básica", user: manager2)
+base = Base.create!(name: "Base Nacional do Conjunto Mínimo de Dados", description: "É o serviço de recepção dos contatos assistenciais (atendimentos) que será disponibilizado para qualquer usuário autorizado a efetuar envios, seja no CMD - Coleta Simplificada ou outro aplicativo a ser integrado.", legal_base: "Cumprimento das obrigações legais ou regulatórias, Execução de políticas públicas, Proteção da vida, Tutela da saúde, Condução de estudos e pesquisas", technical_area: "Secretaria de Atenção Especializada à Saúde", user: manager1)
 
 csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
-csv_text = "./lib/seeds/ubs.csv"
+csv_text = "./lib/seeds/cmd.csv"
+
+CSV.foreach(csv_text, csv_options) do |row|
+  variable = Variable.create!(name: row[0], description: row[1], category: row[2], base: base)
+end
+
+manager2 = User.create!(email: "manager2@test.com", password: '123456', name: Faker::Name.name, cpf: Faker::CPF.numeric, manager: true )
+
+base = Base.create!(name: "E-SUS Notifica", description: "registro de notificações de casos suspeitos do Novo Coronavírus – COVID-19.", legal_base: "Cumprimento das obrigações legais ou regulatórias, Execução de políticas públicas, Proteção da vida, Tutela da saúde, Condução de estudos e pesquisas", technical_area: "Secretaria de Vigilância em Saúde", user: manager2)
+
+csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
+csv_text = "./lib/seeds/esus_notifica_covid.csv"
+
+CSV.foreach(csv_text, csv_options) do |row|
+  variable = Variable.create!(name: row[0], description: row[1], category: row[2], sensibility: row[3], base: base)
+end
+
+base = Base.create!(name: "Base Nacional de Vigilância de Violências e Acidentes (Viva)", description: "O objetivo do Viva é conhecer a magnitude e a gravidade das violências e acidentes e fornecer subsídios para definição de políticas públicas, estratégias e ações de intervenção, prevenção, atenção e proteção às pessoas em situação de violência.", legal_base: "Cumprimento das obrigações legais ou regulatórias, Execução de políticas públicas, Proteção da vida, Tutela da saúde, Condução de estudos e pesquisas", technical_area: "Secretaria de Vigilância em Saúde", user: manager2)
+
+csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
+csv_text = "./lib/seeds/esus_notifica_covid.csv"
 
 CSV.foreach(csv_text, csv_options) do |row|
   variable = Variable.create!(name: row[0], description: row[1], category: row[2], sensibility: row[3], base: base)
