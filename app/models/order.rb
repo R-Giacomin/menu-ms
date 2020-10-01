@@ -4,4 +4,9 @@ class Order < ApplicationRecord
 
   belongs_to :user
   has_many :items, dependent: :destroy
+  has_many :variables, through: :items
+
+  def base
+    self.variables.first.base
+  end
 end
