@@ -1,0 +1,60 @@
+name;description;category1;category
+Número da  Notificação ;Formato  AAUF00NNNNNN, para as notificações antigas, onde AA é o ano com dois dígitos, UF é o código IBGE do estado onde a notificação é feita e NNNNNN é um número sequencial, Após alterações ocorridas a partir de 23/04/2020 passa a ser UFAA00NNNNNN. Campo  interno gerado automaticamente pelo sistema. ;cadastral;restrito
+Estado da Notificação ;Nome do estado. Campo  interno gerado automaticamente pelo sistema, a partir do  operador logado. ;não cadastral;amplo
+Município da Notificação ;Nome do município. Campo  interno gerado automaticamente pelo sistema, a partir do  operador logado. ;não cadastral;amplo
+Tem CPF? ;"Categorias: Sim, Não. Se selecionado “Sim”, preencher campo
+“CPF” 
+ 
+Campo preenchimento obrigatório. Se selecionado “Não”, surgem três campos: “Estrangeiro” (Sim/Não),  “CNS” e Nome Completo da Mãe. ";não cadastral;restrito
+CPF;Ao digitar um CPF, o sistema preenche automaticamente os campos nome completo, data de nascimento, sexo, raça/cor e endereço a partir dos dados da RFB/CNS. Somente o último campo citado poderá ser editado pelo operador. 11 dígitos,  XXX.XXX.XXX-XX , Preenchimento obrigatório, se campo “Tem CPF” = Sim ;cadastral;restrito
+Estrangeiro;Categorias: Sim, Não. Preenchimento obrigatório, se o campo “Tem CPF” = Não. Se selecionado “Sim”, preencher os campos “País de origem” e “Passaporte”. ;não cadastral;restrito
+CNS;Número do Cartão Nacional do SUS. Campo habilitado se campo “Tem CPF?” = Não ;cadastral;restrito
+País de origem ;Preenchimento obrigatório,  se campo Estrangeiro = Sim chimento obrigatório,  se campo;cadastral;amplo
+Passaporte ;Preenchimento obrigatório, se campo “Estrangeiro” = Sim ;cadastral;restrito
+É profissional de saúde?  ;Categorias: Sim, Não. Campo de preenchimento obrigatório. Se selecionado “Sim”, preencher campo “CBO” ;não cadastral;amplo
+É profissional de segurança? ;Categorias: Sim, Não. Campo de preenchimento obrigatório. ;não cadastral;amplo
+CBO;As profissões disponíveis na tabela dizem respeito as principais ocupações especificas da área da saúde. Preenchimento obrigatório, se campo Profissional de Saúde = Sim ;não cadastral;amplo
+Nome Completo ;Campo 	depreenchimento obrigatório. ;cadastral;restrito
+Nome Completo da Mãe ;Campo 	de preenchimento obrigatório. Campo habilitado somente quando o paciente não informar CPF. ;cadastral;restrito
+Data de Nascimento ;Formato DD/MM/AAAA. Campo preenchimento obrigatório. ;cadastral;amplo
+Sexo ;Masculino, Feminino. Campo preenchimento obrigatório. ;não cadastral;amplo
+Raça/Cor ;Branca, Preta, Parda, Amarela, Indígena. Campo preenchimento obrigatório. ;não cadastral;amplo
+CEP ;Indivíduo não sabe o CEP: preencher com 00000-000. Campo preenchimento obrigatório. ;cadastral;restrito
+Logradouro ;Morador de rua, cigano ou análogo: preencher com o termo inexistente, caso a pessoa não tenha endereço. Estrangeiro: preencher com dados do endereço onde esteja hospedado. Campo de preenchimento obrigatório. ;cadastral;restrito
+Número (ou SN para Sem Número) ;Endereço sem número: preencher com SN. ;cadastral;restrito
+Complemento ;Morador de rua, cigano ou análogo: preencher com o termo inexistente, caso a pessoa não tenha endereço. Estrangeiro: preencher com dados do endereço onde esteja hospedado. Campo de preenchimento obrigatório. ;cadastral;restrito
+ Bairro ;Morador de rua, cigano ou análogo: preencher com o termo inexistente, caso a pessoa não tenha endereço. Estrangeiro: preencher com dados do endereço onde esteja hospedado. Campo de preenchimento obrigatório. ;cadastral;restrito
+Estado de Residência;Nome do estado. Morador de rua, cigano ou análogo: preencher com o termo inexistente, caso a pessoa não tenha endereço. Estrangeiro: preencher com dados do endereço onde esteja hospedado.  Campo de preenchimento obrigatório. ;não cadastral;amplo
+Município de Residência ;Município de Residência. Morador de rua, cigano ou análogo: preencher com o termo inexistente, caso a pessoa não tenha endereço. Estrangeiro: preencher com dados do endereço onde esteja hospedado.  Campo de preenchimento obrigatório. ;não cadastral;amplo
+Telefone Celular ;Indivíduo não possui celular: preencher com o telefone fixo, comercial ou de recado. Indivíduo que não possui nenhum telefone: preencher com o telefone do notificante. Estrangeiro: preencher com o telefone de onde esteja hospedado. Campo 	de preenchimento obrigatório. ;cadastral;restrito
+Telefone de Contato ;Indivíduo não possui celular: preencher com o telefone fixo, comercial ou de recado. Indivíduo que não possui nenhum telefone: preencher com o telefone do notificante. Estrangeiro: preencher com o telefone de onde esteja hospedado. Campo 	de preenchimento obrigatório. ;cadastral;restrito
+Data da Notificação ;Campo 	de preenchimento obrigatório. A data da notificação deve ser maior que 01/01/2020 e menor que a data atual do sistema. ;não cadastral;amplo
+Sintoma -  Dor Garganta ;Campo Sintomas de preenchimento obrigatório. Categorias: Sim, Não.  Se o paciente for assintomático, porém com resultado positivo para COVID-19, selecionar “Outros”, e preencher com “Assintomático”. ;não cadastral;amplo
+Sintoma- Dispneia ;Campo Sintomas de preenchimento obrigatório. Categorias: Sim, Não.  Se o paciente for assintomático, porém com resultado positivo para COVID-19, selecionar “Outros”, e preencher com “Assintomático”. ;não cadastral;amplo
+Sintoma- Febre ;Campo Sintomas de preenchimento obrigatório. Categorias: Sim, Não.  Se o paciente for assintomático, porém com resultado positivo para COVID-19, selecionar “Outros”, e preencher com “Assintomático”. ;não cadastral;amplo
+Sintoma- Tosse ;Campo Sintomas de preenchimento obrigatório. Categorias: Sim, Não.  Se o paciente for assintomático, porém com resultado positivo para COVID-19, selecionar “Outros”, e preencher com “Assintomático”. ;não cadastral;amplo
+Sintoma- Outros ;Campo Sintomas de preenchimento obrigatório.Categorias: Sim, Não. Se sintomas “Outros” que não os listados especificar. ;não cadastral;amplo
+Descrição do Sintoma ;Preenchimento obrigatório se Sintomas = “Outros” Se campo “Sintomas”= Outros, habilitar este campo para preenchimento . ;não cadastral;amplo
+Data do início dos sintomas ;Campo 	de preenchimento obrigatório. A data de início de sintomas deve ser maior que 01/01/2020 e menor que a Data da Notificação. Se o paciente for assintomático, porém com resultado positivo para COVID-19, informar a data da notificação. ;não cadastral;amplo
+Condições Doenças respiratórias crônicas descompensadas ;Categorias: Sim, Não. É possível selecionar mais de uma categoria.;não cadastral;amplo
+Condições Doenças cardíacas crônicas ;Categorias: Sim, Não. É possível selecionar mais de uma categoria.;não cadastral;amplo
+Condições Diabetes ;Categorias: Sim, Não. É possível selecionar mais de uma categoria.;não cadastral;amplo
+Condições Doenças renais crônicas em estágio avançado (graus 3, 4 ou 5) ;Categorias: Sim, Não. É possível selecionar mais de uma categoria.;não cadastral;amplo
+Condições Imunossupressão ;Categorias: Sim, Não. É possível selecionar mais de uma categoria.;não cadastral;amplo
+Condições Gestante ;Categorias: Sim, Não. É possível selecionar mais de uma categoria.;não cadastral;amplo
+Condições Portador de doenças cromossômicas ou estado de fragilidade imunológica ;Categorias: Sim, Não. É possível selecionar mais de uma categoria.;não cadastral;amplo
+Estado do Teste ;Se selecionada a categorias “Coletado”, será necessário preencher a data da coleta do teste. Categorias: Solicitado, Coletado, Concluído, Exame solicitado ;não cadastral;amplo
+Data de Coleta do Teste ;Se selecionada a categoria “Concluído”, será necessário preencher os campos “Data da Coleta do Teste”, “Tipo de Teste” e “Resultado do Teste”. A data da coleta deve ser maior que 01/01/2020 e menor que a data atual do sistema. ;não cadastral;amplo
+Tipo de Teste ;"Estado 	do Teste = Coletado ou Concluído. Categorias: Teste Rápido - Anticorpo, Teste Rápido Antígeno RT-PCR, Enzimaimunoensaio-ELISA, Imunoensaio por Eletroquimioluminescência-ECLIA. Preenchimento obrigatório se campo Estado do Teste = “Concluído”.  Caso o paciente tenha resultado positivo ou negativo  tanto para teste rápido quanto para RT-PCR, selecionar a opção RT-PCR.  
+ ";não cadastral;amplo
+Resultado do Teste;Categorias: Negativo, Positivo. Preenchimento obrigatório se campo Estado do Teste = “Concluído”. ;não cadastral;amplo
+Classificação Final ;"Apenas gestores podem preencher, por meio da opção “Encerrar Notificação”. Categorias: Confirmado Laboratorial, Confirmado Clínico-Epidemiológico, Descartado Síndrome Gripal não Especificada, Confirmado 
+Clínico-Imagem,  Confirmado por Critério Clínico.";não cadastral;amplo
+Evolução do Caso ;"Preenchimento obrigatório se o campo Evolução do Caso for preenchido. Apenas gestores podem preencher, por meio da opção “Encerrar Notificação”. Categorias: Cancelado, Ignorado, Óbito 
+Cura, Internado, Internado em UTI, Em tratamento domiciliar ";não cadastral;amplo
+Data de Encerramento ;Preenchimento obrigatório se o campo Evolução do Caso for preenchido. Apenas gestores podem preencher, por meio da opção “Encerrar Notificação”. ;não cadastral;amplo
+Notificador ;Notificante  Nome Completo. Campo interno preenchido automaticamente pelo sistema, a partir do operador logado. ;não cadastral;restrito
+Notificante CNES ;Campo interno preenchido automaticamente pelo sistema, a partir do operador logado. ;não cadastral;amplo
+Notificante CPF ;Campo interno preenchido automaticamente pelo sistema, a partir do operador logado. ;cadastral;restrito
+Notificante e-mail ;Campo interno preenchido automaticamente pelo sistema, a partir do operador logado. ;cadastral;restrito
+Notificante CNPJ ;Campo interno preenchido automaticamente pelo sistema, a partir do operador logado. ;não cadastral;restrito
