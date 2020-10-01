@@ -9,5 +9,12 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show]
 
+  resources :orders do
+    resources :items, only: [:destroy]
+  end
+
+  get "/conclude/:id", to: "orders#conclude", as: :conclude_order
+  get "/cancel/:id", to: "orders#cancel", as: :cancel_order
+
   root to: 'pages#home'
 end
