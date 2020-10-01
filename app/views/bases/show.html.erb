@@ -1,19 +1,22 @@
-<h2 class="mt-5"><%= @base.name %></h2>
-<table class="table mt-3">
-  <thead>
-    <tr>
-      <th scope="col">Variável</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Categoria</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @base.variables.each do |variable| %>
+<div class="container">
+
+  <h2 class="mt-5"><%= @base.name %></h2>
+  <table class="table mt-3">
+    <thead class="thead-dark">
       <tr>
-        <th scope="row"><%= variable.name %></th>
-        <td><%=  variable.description %></td>
-        <td><%=  variable.category %></td>
+        <th scope="col">Variável</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Categoria</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @base.variables.each do |variable| %>
+        <tr <%= "class=#{variable.category}" %> >
+          <th scope="row"><%= variable.name %></th>
+          <td><%=  variable.description %></td>
+          <td><%=  variable.category %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
