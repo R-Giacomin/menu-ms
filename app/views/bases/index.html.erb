@@ -1,24 +1,23 @@
-<div class="container mt-5">
-
 <div class="container">
   <div class="row">
     <% @bases.each do |base| %>
       <div class="col-sm-6">
         <div class="p-3">
           <div class="card" style="width: 100%;">
-            <%# <img src=image_tag "CMD.png" class="card-img-top" alt="..."> %>
-            <%= image_tag "CMD.png" %>
+<!--             <%= image_tag "CMD.png" %> -->
             <div class="card-body">
-              <h5 class="card-title"><%= base.name %></h5>
+              <h5 class="card-title"> <strong> <%= base.name %></strong></h5>
               <p class="card-text"><%= base.description %></p>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><%= base.legal_base %></li>
               <li class="list-group-item"><%= base.technical_area %></li>
-              <li class="list-group-item"><%= base.user.name %></li>
+              <li class="list-group-item">Gestor da base: <%= base.user.name %></li>
             </ul>
             <div class="card-body">
-              <%= link_to "Conheça as variáveis desse banco", basis_path(base), class: "btn" %>
+
+              <%= link_to 'Conheça as variáveis desse banco', basis_path(base), class: "btn btn-dark" %>
+
             </div>
           </div>
         </div>

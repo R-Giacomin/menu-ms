@@ -5,16 +5,13 @@
     <p>
       <span id="banner-typed-text"></span>
     </p>
-  </div>
-</div>
-
-<div class="container">
-  <div class="search text-center">
-    <%= form_tag bases_path, :method => "get" do %>
-      <%= text_field_tag :search, params[:search],
-      placeholder: "Procure por um termo" %>
-      <%= submit_tag("Buscar", :name => nil, class: "btn btn-warning") %>
-    <% end %>
+      <div class="search text-center">
+        <%= form_tag bases_path, :method => "get" do %>
+          <%= text_field_tag :search, params[:search],
+          placeholder: "Procure por um termo" %>
+          <%= submit_tag("Buscar", :name => nil, class: "btn btn-primary btn-ms") %>
+        <% end %>
+      </div>
   </div>
 </div>
 
@@ -29,9 +26,9 @@
               <a href="">
                 <img src="icon1.png" width="105" alt="Ícone de Definição 1">
                   <h2>O que são dados de saúde?</h2>
-                  <p>São dados relativos ao seu estado de saúde, 
-                  que revelem informações sobre a sua saúde física ou mental, 
-                  no passado, presente ou futuro. 
+                  <p>São dados relativos ao seu estado de saúde,
+                  que revelem informações sobre a sua saúde física ou mental,
+                  no passado, presente ou futuro.
                   </p>
               </a>
           </div>
@@ -40,7 +37,7 @@
             <a href="">
                 <img src="icon2.png" width="105" alt="Ícone de Definição 2">
                 <h2>O que é tratamento de dados?</h2>
-                <p>É toda operação realizada com dados pessoais de saúde, 
+                <p>É toda operação realizada com dados pessoais de saúde,
                 desde a coleta até a sua disponibilização, com propósitos
                 legítimos, específicos, explícitos e informados ao titular de dados.
                 </p>
@@ -51,8 +48,8 @@
               <a href="">
                   <img src="images/icon3.png" width="105" alt="Ícone de Definição 3">
                   <h2>Onde estão meus dados de saúde?</h2>
-                  <p>Dados encaminhados ao Ministério da Saúde 
-                  estão armazenados em Bases Nacionais de Dados em Saúde. 
+                  <p>Dados encaminhados ao Ministério da Saúde
+                  estão armazenados em Bases Nacionais de Dados em Saúde.
                   </p>
               </a>
           </div>
