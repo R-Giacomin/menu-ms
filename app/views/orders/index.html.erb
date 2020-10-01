@@ -1,11 +1,13 @@
 <h2>Pedidos de <%= current_user.name%></h2>
 <ul>
-  <
   <% @orders.each do |order| %>
-    <li><%= order.inspect %></li>
+    <li>Base: <%= order.base.name %></li>
     <li>Situação: <%= order.status %></li>
-    <li>Justificativa: <%= order.justify %> </li>
-    <li>Status: <%= order.category %> </li>
+    <li>Justificativa: <%= order.justify %></li>
+    <li>Categoria do pedido: <%= order.category %></li>
+    <% order.variables.each do |variable| %>
+      <p><%= "    -> #{variable.name}" %></p>
+    <% end %>
     <br>
   <% end %>
 </ul>
