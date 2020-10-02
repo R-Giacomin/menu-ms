@@ -52,13 +52,13 @@ end
   user = User.create!(email: "user#{i}@test.com", password: '123456', name: Faker::Name.name, cpf: Faker::CPF.numeric )
 end
 
-puts "Alimentando o banco com pedidos..."
-User.all.each do |usr|
-  feed_order(usr)
-end
+# puts "Alimentando o banco com pedidos..."
+# User.all.each do |usr|
+#   feed_order(usr)
+# end
 
-puts "Alimentando os pedidos com itens..."
-feed_item
+# puts "Alimentando os pedidos com itens..."
+# feed_item
 
 puts "Número de variáveis criadas: #{Variable.count}"
 puts "Número de bases criadas: #{Base.count}"
