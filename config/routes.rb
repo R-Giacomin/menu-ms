@@ -8,12 +8,13 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create]
 
-  resources :orders do
-    resources :items, only: [:destroy]
-  end
+  resources :items, only: [:destroy]
 
-  get "/conclude/:id", to: "orders#conclude", as: :conclude_order
-  get "/cancel/:id", to: "orders#cancel", as: :cancel_order
+
+  get "/conclude_order/:id", to: "orders#conclude_order", as: :conclude_order
+  get "/cancel_order/:id", to: "orders#cancel_order", as: :cancel_order
+  get "/items/:id", to: "items#destroy", as: :delete_item
+  get "/create_order/:id", to: "orders#create", as: :create_order
 
   root to: 'pages#home'
 end

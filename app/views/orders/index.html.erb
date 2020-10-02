@@ -4,7 +4,7 @@
     <div class="col">
       <% @orders.sort.each_with_index do |order, i| %>
         <p>
-          <strong>Pedido nº </strong> <span Style="color:darkred"><%= i + 1 %></span>
+          <strong>Pedido nº </strong> <span Style="color:darkred"><%= "#{i + 1}" %></span>
           <% if order.aberta? %>
             <%= link_to 'Concluir', conclude_order_path(order),
                data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-primary" %>
@@ -13,13 +13,13 @@
           <% end %>
         </p>
         <h4>
-          <strong>Nome da Base: </strong><%= order.base.name %></h4>
+          <strong>Nome da Base: </strong><%= order.base.name if order.items.count.positive? %></h4>
         <p><strong>Situação: </strong><%= order.status %></p>
         <p><strong>Justificativa: </strong><%= order.justify %></p>
         <p><strong>Categoria do pedido: </strong><%= order.category  %></p>
         <% order.items.each do |item| %>
           <p style="margin-left: 20px">
-            <%= link_to 'Excluir', order_path(item), method: :delete,
+            <%= link_to 'Excluir', delete_item_path(item),
              data: { confirm: 'Confirma a exclusão desse item?' }, class: "btn btn-warning" %>
             <%=" ✔ #{item.variable.name}" %>
 
