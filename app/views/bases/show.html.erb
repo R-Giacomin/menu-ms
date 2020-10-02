@@ -1,7 +1,7 @@
 <div class="container">
 
   <h2 class="mt-5"><%= @base.name %></h2>
-  <%= link_to 'Pedir essa base', basis_items_path(@base), method: :post, class: "btn btn-dark" %>
+  <%= link_to 'Pedir essa base', create_order_path(@base), class: "btn btn-dark" %>
   <table class="table mt-3">
     <thead class="thead-dark">
       <tr>
