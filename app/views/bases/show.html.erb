@@ -1,11 +1,11 @@
 
 <div class="container">
 
-  <h2 class="mt-5"><%= @base.name %></h2>
-  <%= link_to 'Voltar', bases_path, class: "btn btn-dark" %>
-  <%= link_to 'Pedir essa base', create_order_path(@base), class: "btn btn-dark" %>
+  <h2 class="mt-5 text-center mb-3"><%= @base.name %></h2>
+  <%= link_to 'Voltar', bases_path, class: "btn btn-primary btn-ms" %>
+  <%= link_to 'Solicitar meus dados', create_order_path(@base), class: "btn btn-primary btn-ms" %>
   <table class="table mt-3">
-    <thead class="thead-dark">
+    <thead class="thead-dark bg-primary">
       <tr>
         <th scope="col">Variável</th>
         <th scope="col">Descrição</th>
