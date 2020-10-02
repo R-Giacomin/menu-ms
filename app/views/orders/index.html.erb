@@ -1,5 +1,6 @@
-<h3>Pedidos de <%= current_user.name%></h3>
 <div class="container mt-5">
+  <h3>Pedidos de <%= current_user.name%></h3>
+  <hr>
   <div class="row mt-2">
     <div class="col">
       <% @orders.sort.each_with_index do |order, i| %>
@@ -7,9 +8,9 @@
           <strong>Pedido nº </strong> <span Style="color:darkred"><%= "#{i + 1}" %></span>
           <% if order.aberta? %>
             <%= link_to 'Concluir', conclude_order_path(order),
-               data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-primary" %>
+               data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-dark" %>
             <%= link_to 'Cancelar', cancel_order_path(order),
-               data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-warning" %>
+               data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-dark" %>
           <% end %>
         </p>
         <h4>
@@ -19,8 +20,9 @@
         <p><strong>Categoria do pedido: </strong><%= order.category  %></p>
         <% order.items.each do |item| %>
           <p style="margin-left: 20px">
-            <%= link_to 'Excluir', delete_item_path(item),
-             data: { confirm: 'Confirma a exclusão desse item?' }, class: "btn btn-warning" %>
+            <%= link_to delete_item_path(item), method: :delete, data: { confirm: 'Confirma a exclusão desse item?' } do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
             <%=" ✔ #{item.variable.name}" %>
 
             </p>
