@@ -5,10 +5,10 @@
     <p>
       <span id="banner-typed-text"></span>
     </p>
-      <div class="search text-center">
+      <div class="text-center">
         <%= form_tag bases_path, :method => "get" do %>
           <%= text_field_tag :search, params[:search],
-          placeholder: "Procure por um termo" %>
+          placeholder: "O que você procura?", class: "search" %>
           <%= submit_tag("Buscar", :name => nil, class: "btn btn-primary btn-ms") %>
         <% end %>
       </div>
