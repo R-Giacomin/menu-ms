@@ -6,7 +6,8 @@
       <% @orders.sort.reverse.each do |order| %>
         <p>
           <strong>Pedido código </strong> <span Style="color:darkred">
-            <%= "#{order.id} de #{order.created_at.strftime("%d/%m/%Y às %H:%M")}" %></span>
+            <% date_time = order.created_at + DateTime.now.strftime('%z').to_i/100 * 60 * 60 %>
+            <%= "#{order.id} de #{date_time.strftime("%d/%m/%Y às %H:%M")}" %></span>
         </p>
         <h4>
           <strong>Nome da Base: </strong><%= order.base.name if order.items.count.positive? %></h4>

@@ -1,7 +1,8 @@
 <div class="container mt-5">
   <div class="center-content">
     <h4>
-       <strong>Pedido</strong> <span Style="color:darkred"><%= " nº #{@order.id} de #{@order.created_at.strftime('%d/%m/%Y às %H:%M')}" %></span>
+      <strong>Pedido</strong> <span Style="color:darkred">
+        <%= " nº #{@order.id} de #{@date_time.strftime('%d/%m/%Y às %H:%M')}" %></span>
     </h4>
     <p>
       <% if @order.aberta? %>

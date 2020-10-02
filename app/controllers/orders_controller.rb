@@ -4,7 +4,9 @@ class OrdersController < ApplicationController
     @orders = Order.where(user_id: current_user.id)
   end
 
-  def show; end
+  def show
+    @date_time = @order.created_at + DateTime.now.strftime('%z').to_i / 100 * 60 * 60
+  end
 
   def create
     @base = Base.find(params[:id])
