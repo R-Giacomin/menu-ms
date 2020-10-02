@@ -15,7 +15,7 @@
           <strong> <%= 'Justificativa: ' unless order.pessoais? %> </strong>
           <%= order.justify unless order.pessoais? %>
         </p>
-          <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-primary" %>
+          <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-dark" %>
           <% if order.aberta? %>
             <%= link_to 'Concluir', conclude_order_path(order),
                data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-dark" %>
