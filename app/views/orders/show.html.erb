@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="center-content">
+    <h4>
+       <strong>Pedido código </strong> <span Style="color:darkred"><%= @order.id %></span> de <%= current_user.name %>
+    </h4>
+    <p>
+      <% if @order.aberta? %>
+        <%= link_to 'Concluir', conclude_order_path(@order),
+           data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-dark" %>
+        <%= link_to 'Cancelar', cancel_order_path(@order),
+           data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-dark" %>
+      <% end %>
+      <%= link_to 'Ir para edidos', orders_path, class: "btn btn-dark" %>
+    </p>
+  </div>
+  <hr>
+  <div class="row mt-2">
+    <div class="col">
+      <h5><strong>Nome da Base: </strong><%= @order.base.name if @order.items.count.positive? %></h5>
+      <p><strong>Situação: </strong><%= @order.status %></p>
+      <p><strong>Categoria do pedido: </strong><%= @order.category  %></p>
+      <p>
+        <strong> <%= 'Justificativa: ' unless @order.pessoais? %> </strong>
+        <%= @order.justify unless @order.pessoais? %>
+      </p>
+      <% @order.items.each do |item| %>
+        <p style="margin-left: 20px">
+          <%= link_to delete_item_path(item), method: :delete, data: { confirm: 'Confirma a exclusão desse item?' } do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
+          <%=" ✔ #{item.variable.name}" %>
+
+          </p>
+      <% end %>
+    </div>
+  </div>
+</div>
