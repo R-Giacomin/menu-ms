@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
     @base.variables.each do |variable|
       Item.create!(variable_id: variable.id, order_id: @order.id)
     end
-    redirect_to orders_path
+    redirect_to "#{orders_path}/#{@order.id}"
   end
 
   def update; end
