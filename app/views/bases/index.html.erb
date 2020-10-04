@@ -1,5 +1,11 @@
 <div class="container">
-  <h1 class= "mt-5 text-center">Bases encontradas com o termo <strong><%= "#{params[:search]}" %></strong>:</h1>
+  
+  <% if params[:search].present? %>
+    <h1 class= "mt-5 text-center">Bases encontradas com o termo <strong><%= "#{params[:search]}" %></strong>:</h1>
+    <% else %>
+    <h1 class= "mt-5 text-center">Bases encontradas:</h1>
+  <% end %>
+
     <div class="row">
       <% @bases.each do |base| %>
         <div class="col-sm-6">

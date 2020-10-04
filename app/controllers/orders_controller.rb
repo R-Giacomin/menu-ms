@@ -4,7 +4,9 @@ class OrdersController < ApplicationController
     @orders = Order.where(user_id: current_user.id)
   end
 
-  def show; end
+  def show
+    @date_time = @order.created_at + DateTime.now.strftime('%z').to_i / 100 * 60 * 60
+  end
 
   def create
     @base = Base.find(params[:id])
@@ -13,7 +15,7 @@ class OrdersController < ApplicationController
     @base.variables.each do |variable|
       Item.create!(variable_id: variable.id, order_id: @order.id)
     end
-    redirect_to orders_path
+    redirect_to "#{orders_path}/#{@order.id}"
   end
 
   def update; end

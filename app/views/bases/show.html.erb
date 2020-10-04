@@ -2,8 +2,8 @@
 <div class="container">
 
   <h2 class="mt-5 text-center mb-3"><%= @base.name %></h2>
-  <%= link_to 'Voltar', bases_path, class: "btn btn-primary btn-ms" %>
-  <%= link_to 'Solicitar meus dados', create_order_path(@base), class: "btn btn-primary btn-ms" %>
+  <%= link_to 'Voltar', :back, class: "btn btn-dark" %>
+  <%= link_to 'Solicitar meus dados', create_order_path(@base), class: "btn btn-dark" %>
   <table class="table mt-3">
     <thead class="thead-dark bg-primary">
       <tr>
