@@ -14,8 +14,7 @@
     </div>
 
     <div class="col-sm-2">
-
-    <%= link_to 'Solicitar meus dados', create_order_path(@base), class: "btn btn-dark" %>
+      <%= link_to 'Solicitar meus dados', create_order_path(@base), id: "pedido", class: "btn btn-dark" %>
     </div>
   </div>
 </div>
@@ -26,13 +25,13 @@
               <div class="col-md-12">
                   <nav>
                       <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Dados pessoais</a>
-                          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dados gerais identificados</a>
-                          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Dados gerais não identificados</a>
+                          <a class="nav-item nav-link active" id="nav-pessoais-tab" data-toggle="tab" href="#nav-pessoais" role="tab" aria-controls="nav-pessoais" aria-selected="true" category="pessoais">Dados pessoais</a>
+                          <a class="nav-item nav-link" id="nav-identificado-tab" data-toggle="tab" href="#nav-identificado" role="tab" aria-controls="nav-identificado" aria-selected="false" category="identificado">Dados gerais identificados</a>
+                          <a class="nav-item nav-link" id="nav-nidentificado-tab" data-toggle="tab" href="#nav-nidentificado" role="tab" aria-controls="nav-nidentificado" aria-selected="false" category="nIdentificado">Dados gerais não identificados</a>
                       </div>
                   </nav>
                   <div class="tab-content" id="nav-tabContent">
-                      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                      <div class="tab-pane fade show active" id="nav-pessoais" role="tabpanel" aria-labelledby="nav-pessoais-tab">
                           <table class="table" cellspacing="0">
                               <thead>
                                   <tr>
@@ -52,7 +51,7 @@
                               </tbody>
                           </table>
                       </div>
-                      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                      <div class="tab-pane fade" id="nav-identificado" role="tabpanel" aria-labelledby="nav-identificado-tab">
                           <table class="table" cellspacing="0">
                               <thead>
                                   <tr>
@@ -72,7 +71,7 @@
                               </tbody>
                           </table>
                       </div>
-                      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                      <div class="tab-pane fade" id="nav-nidentificado" role="tabpanel" aria-labelledby="nav-nidentificado-tab">
                           <table class="table" cellspacing="0">
                               <thead>
                                 <tr>
@@ -99,3 +98,38 @@
           </div>
       </div>
 </section>
+<script>
+  let pessoais = document.getElementById("nav-pessoais-tab");
+  let identificado = document.getElementById("nav-identificado-tab");
+  let nIdentificado = document.getElementById("nav-nidentificado-tab");
+  let criarPedido = document.getElementById("pedido");
+  let url = criarPedido.href.split("?")[0];
+
+  pessoais.addEventListener("click", (e) => {
+    if (pessoais.ariaSelected) {
+      url += "?category=pessoais";
+      criarPedido.href = url;
+      url = url.split("?")[0];
+      console.log(url);
+      console.log(criarPedido)
+    }
+  })
+  identificado.addEventListener("click", (e) => {
+    if (identificado.ariaSelected) {
+      url += "?category=identificado";
+      criarPedido.href = url;
+      url = url.split("?")[0];
+      console.log(url);
+      console.log(criarPedido)
+    }
+  })
+  nIdentificado.addEventListener("click", (e) => {
+    if (nIdentificado.ariaSelected) {
+      url += "?category=nIdentificado";
+      criarPedido.href = url;
+      url = url.split("?")[0];
+      console.log(url);
+      console.log(criarPedido)
+    }
+  })
+</script>
