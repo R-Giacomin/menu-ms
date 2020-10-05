@@ -27,10 +27,22 @@ class BasesController < ApplicationController
     end
   end
 
+  def autocomplete
+    render json: Base.search(params[:search],
+    {
+      fields: [:name, :description, :technical_area],
+      match: :word_start,
+      limit: 10,
+      load: false,
+      misspellings: { below: 5 }
+    }).map(&:name)
+  end
+
   private
 
   def base_params
     params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area)
     # Vamos colocar uma foto/logo da base?
   end
+
 end
