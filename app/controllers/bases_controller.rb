@@ -16,20 +16,37 @@ class BasesController < ApplicationController
   def new
     @base = Base.new
   end
-
+  
   def create
+    raise
     @base = Base.new(base_params)
+    @base.user = @user
     if @base.save
-       redirect_to base_path(@base)
+      redirect_to base_path(@base)
     else
-       render 'new'
+      render 'new'
     end
   end
+
+  # def import
+  #   rowarray = Array.new
+  #   myfile = params[:file]
+
+  #   @rowarraydisp = CSV.read(myfile.path)
+  # end
+
+  
+def import
+  uploaded_file = params[:file]
+  File.open(Rails.root.join('public', 'uploads', uploaded_file.original_filename), 'wb') do |file|
+    file.write(uploaded_file.read)
+  end
+end
 
   private
 
   def base_params
-    params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area)
+    params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :file)
     # Vamos colocar uma foto/logo da base?
   end
 end
