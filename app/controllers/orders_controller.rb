@@ -10,10 +10,18 @@ class OrdersController < ApplicationController
 
   def create
     @base = Base.find(params[:id])
-    @order = Order.create!(status: "aberta", category: "pessoais",
-                           justify: "Uma justificativa", user_id: current_user.id)
-    @base.variables.each do |variable|
-      Item.create!(variable_id: variable.id, order_id: @order.id)
+    @category = params[:category]
+    @order = Order.create!(user_id: current_user.id, category: @category)
+    if @order.category == "nIdentificado"
+      @base.variables.each do |variable|
+        if variable.category == "não cadastral"
+          Item.create!(variable_id: variable.id, order_id: @order.id)
+        end
+      end
+    else
+      @base.variables.each do |variable|
+        Item.create!(variable_id: variable.id, order_id: @order.id)
+      end
     end
     redirect_to "#{orders_path}/#{@order.id}"
   end
@@ -32,7 +40,7 @@ class OrdersController < ApplicationController
 
   private
 
-  def order_params
+  def strong_params
     params.require(:order).permit(:status, :justify, :category)
   end
 

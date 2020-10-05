@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   resources :items, only: [:destroy]
 
-
   get "/conclude_order/:id", to: "orders#conclude_order", as: :conclude_order
   get "/cancel_order/:id", to: "orders#cancel_order", as: :cancel_order
   get "/items/:id", to: "items#destroy", as: :delete_item
