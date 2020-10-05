@@ -21,9 +21,9 @@ class BasesController < ApplicationController
   def create
     @base = Base.new(base_params)
     if @base.save
-      redirect_to base_path(@base)
+       redirect_to base_path(@base)
     else
-      render 'new'
+       render 'new'
     end
   end
 

@@ -1,5 +1,5 @@
 <div class="container">
-  
+
   <% if params[:search].present? %>
     <h1 class= "mt-5 text-center">Bases encontradas com o termo <strong><%= "#{params[:search]}" %></strong>:</h1>
     <% else %>
@@ -10,7 +10,8 @@
       <% @bases.each do |base| %>
         <div class="col-sm-6">
           <div class="p-3">
-            <div class="card mt-3" style="width: 100%;">
+            <div class="card mt-3 hoverable" style="width: 100%;">
+          <%= link_to "", basis_path(base), class: 'card-link' %>
   <!--             <%= image_tag "CMD.png" %> -->
               <div class="card-body">
                 <h5 class="card-title text-danger" > <strong> <%= base.name %></strong></h5>
