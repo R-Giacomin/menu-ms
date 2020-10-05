@@ -1,5 +1,4 @@
 class BasesController < ApplicationController
-
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
@@ -21,9 +20,9 @@ class BasesController < ApplicationController
   def create
     @base = Base.new(base_params)
     if @base.save
-        redirect_to base_path(@base)
+       redirect_to base_path(@base)
     else
-        render 'new'
+       render 'new'
     end
   end
 
@@ -31,6 +30,6 @@ class BasesController < ApplicationController
 
   def base_params
     params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area)
-    #Vamos colocar uma foto/logo da base?
+    # Vamos colocar uma foto/logo da base?
   end
 end
