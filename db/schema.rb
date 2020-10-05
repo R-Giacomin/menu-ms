@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2020_10_04_162709) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "status", default: 1
+    t.integer "status"
     t.integer "category"
     t.string "justify"
     t.bigint "user_id", null: false
