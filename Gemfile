@@ -34,7 +34,11 @@ gem 'simple_form'
 gem 'devise'
 gem 'cpf_faker'
 gem 'faker'
-gem 'pg_search', '~> 2.3.0'
+
+# gem 'pg_search', '~> 2.3.0'
+# Gem to be used to translate elasticSearch commands. Obs: we commented the pg_search gem
+gem 'searchkick', '~> 4.4.1'
+
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem 'rails_admin', '~> 2.0'
