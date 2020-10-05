@@ -1,5 +1,5 @@
 class Base < ApplicationRecord
-  searchkick
+  searchkick word_start: [:name, :description, :technical_area]
   belongs_to :user
   has_many :variables, dependent: :destroy
 
