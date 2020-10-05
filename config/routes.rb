@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :bases do
     resources :items, only: [:create]
+    member do
+      get 'import'
+      patch 'import'
+    end
   end
 
   resources :orders, only: [:index, :show, :create]
