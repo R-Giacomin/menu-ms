@@ -16,9 +16,8 @@ class BasesController < ApplicationController
   def new
     @base = Base.new
   end
-  
+
   def create
-    raise
     @base = Base.new(base_params)
     @base.user = @user
     if @base.save
@@ -35,7 +34,7 @@ class BasesController < ApplicationController
   #   @rowarraydisp = CSV.read(myfile.path)
   # end
 
-  
+
 def import
   uploaded_file = params[:file]
   File.open(Rails.root.join('public', 'uploads', uploaded_file.original_filename), 'wb') do |file|
