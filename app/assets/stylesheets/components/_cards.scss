@@ -2,6 +2,7 @@
   margin-top: 2rem !important;
 }
 
+
 .card-link {
   position: absolute;
   top: 0;
@@ -17,3 +18,10 @@
   opacity: 0.1;
   // border-radius: 10%;
  }
+
+.card-img {
+width: 150px;
+object-fit: cover;
+height: 150px;
+}
+
