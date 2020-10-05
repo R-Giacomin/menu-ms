@@ -19,9 +19,14 @@ class BasesController < ApplicationController
 
   def create
     @base = Base.new(base_params)
-    @base.user = @user
+    @base.user = current_user
     if @base.save
-      redirect_to base_path(@base)
+      csv_file = params[:base][:import][:attachment]
+      CSV.foreach(csv_file.path) do |row|
+        puts "-----"
+        puts row
+      end  # o redirect estava errado!
+      redirect_to basis_path(@base)
     else
       render 'new'
     end
