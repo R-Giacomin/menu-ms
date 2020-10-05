@@ -8,12 +8,15 @@ Rails.application.routes.draw do
       get 'autocomplete'
     end
     resources :items, only: [:create]
+    member do
+      get 'import'
+      patch 'import'
+    end
   end
 
   resources :orders, only: [:index, :show, :create]
 
   resources :items, only: [:destroy]
-
 
   get "/conclude_order/:id", to: "orders#conclude_order", as: :conclude_order
   get "/cancel_order/:id", to: "orders#cancel_order", as: :cancel_order
