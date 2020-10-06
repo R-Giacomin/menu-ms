@@ -1,39 +1,4 @@
-<div class="container">
-  <h1>Inserir uma nova base de dados</h1>
-  <h2>Instruções para o arquivo de dicionário de dados</h2>
-  <ul>
-    <li>O arquivo deve ser csv separado por " ; ".</li>
-    <li>Os textos do arquivo não devem conter os caracteres " " " e " ; ".</li>
-    <li>A primeira linha do arquivo deve ser o cebeçalho.</li>
-    <li>A ordem das colunas deve obrigatoriamente ser: Nome da variável, Descrição da variável e Categoria.</li>
-    <li>A coluna categoria deve ser preenchida necessáriamente com "cadastral" ou "não cadastral"</li>
-  </ul>
-
-  <h2>Exemplo de arquivo:</h2>
-  <p>name;description;category1;<br>
-    Nº da Notificação ;Número da Notificação. Campo Chave para identificação do registro no sistema. ;cadastral;<br>
-    Tipo de Notificação ;Identifica o tipo da notificação. Compo Obrigatório. Texto Codificado: 1- Negativa, 2- Individual, 3- Surto, 4 - Agregado.;não cadastral;<br>
-    Agravo ;Nome e código do agravo notificado segundo CID-10.;não cadastral;<br>
-    Data da Notificação ;Data de preenchimento da ficha de notificação. Campo Chave. ;não cadastral;</p>
-
-    <%= simple_form_for @base do |f| %>
-
-    <%= f.input :name, label: 'Nome da Base' %>
-    <%= f.input :description, label: 'Descrição' %>
-    <%= f.input :legal_base, label: 'Bases legais da LGPD para tratamento de dados', placeholder: 'Indique quais bases legais você utiliza para tratamento dos dados de saúde' %>
-    <%= f.input :technical_area, label: 'Área Técnica', placeholder: 'Indique a Secretaria do Ministério da Saúde que responde pela Base de Dados' %>
-    <%#= f.input :photo, as: :file, label: 'Logo da Base' %>
-    <%= f.simple_fields_for :import do |g| %>
-      <%= g.input :attachment, as: :file, label: 'Dicionário de dados em csv' %>
-    <% end %>
-    <%= f.button :submit, "Inserir Base", class: "btn btn-dark" %>
-    <% end %>
-    <br>
-    <%= link_to 'Voltar', :back, class: "btn btn-dark" %>
-</div>
-
-
-
+<%= render 'form', base: @base, locals: { btn_name: 'Cadastrar Base' }  %>
 
 
 
