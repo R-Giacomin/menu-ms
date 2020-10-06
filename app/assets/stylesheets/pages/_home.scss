@@ -1,1 +1,35 @@
-// Specific CSS for your home-page
+.flip-card {
+    perspective: 1000px;
+    overflow: hidden;
+    height: 200px;
+    .flip {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+    position: relative;
+    img {
+        height: 100%;
+    }
+    &:hover {
+        transform: rotateY(180deg);
+      }
+    }
+    
+    
+    .front,
+    .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    }
+
+    .front {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+    .back {
+        transform: rotateY(180deg);
+    }
+    
+}
