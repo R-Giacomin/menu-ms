@@ -1,4 +1,5 @@
 class BasesController < ApplicationController
+  before_action :set_base, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
@@ -10,7 +11,6 @@ class BasesController < ApplicationController
   end
 
   def show
-    @base = Base.find(params[:id])
   end
 
   def new
@@ -32,6 +32,18 @@ class BasesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def destroy
+    if @base.user != current_user
+      redirect_to root_path, alert: 'Não autorizado'
+    else
+      @base.destroy
+      redirect_to bases_path, notice: 'Base excluída.'
+    end
+  end
+
   def autocomplete
     render json: Base.search(params[:search],
     {
@@ -44,6 +56,10 @@ class BasesController < ApplicationController
   end
 
   private
+
+  def set_base
+    @base = Base.find(params[:id])
+  end
 
   def base_params
     params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :file)
