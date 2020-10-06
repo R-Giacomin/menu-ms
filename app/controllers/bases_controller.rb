@@ -20,11 +20,11 @@ class BasesController < ApplicationController
   def create
     @base = Base.new(base_params)
     @base.user = current_user
+    csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
     if @base.save
       csv_file = params[:base][:import][:attachment]
-      CSV.foreach(csv_file.path) do |row|
-        puts "-----"
-        puts row
+      CSV.foreach(csv_file.path, csv_options) do |row|
+        variable = Variable.create!(name: row[0], description: row[1], category: row[2], base: @base)
       end  # o redirect estava errado!
       redirect_to basis_path(@base)
     else

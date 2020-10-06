@@ -1,4 +1,3 @@
-
 require 'csv'
 require 'faker'
 require 'cpf_faker'
