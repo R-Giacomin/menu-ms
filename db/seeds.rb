@@ -7,6 +7,8 @@ Variable.destroy_all
 Base.destroy_all
 User.destroy_all
 
+admin = User.create!(email: "admin@admin.com", password: '123456', name: Faker::Name.name, cpf: Faker::CPF.numeric, admin: true )
+
 manager1 = User.create!(email: "manager1@test.com", password: '123456', name: Faker::Name.name, cpf: Faker::CPF.numeric, manager: true )
 
 base = Base.create!(name: "Banco de Dados de Síndrome Respiratória Aguda Grave", description: "Vigilância de Síndrome Respiratória Aguda Grave (SRAG) O Ministério da Saúde, por meio da Secretaria de Vigilância em Saúde (SVS), desenvolve a vigilância da Síndrome Respiratória Aguda...", legal_base: "Cumprimento das obrigações legais ou regulatórias, Execução de políticas públicas, Proteção da vida, Tutela da saúde, Condução de estudos e pesquisas", technical_area: "Secretaria de Vigilancia Sanitária", user: manager1)
