@@ -10,6 +10,12 @@ class BasesController < ApplicationController
     end
   end
 
+  def my_bases
+    @user = current_user
+    @id = current_user.id
+    @bases = Base.where(user_id: @id)
+  end
+
   def show
   end
 
@@ -33,6 +39,18 @@ class BasesController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @base.user != current_user
+      redirect_to root_path, alert: 'Não autorizado'
+    else
+      if @base.update(base_params)
+        redirect_to @base, notice: 'Base foi atualizada.'
+      else
+        render :edit
+      end
+    end
   end
 
   def destroy

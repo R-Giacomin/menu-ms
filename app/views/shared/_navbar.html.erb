@@ -13,10 +13,15 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
+        <% if current_user.manager == true %>
         <li class="nav-item active">
-          <% if current_user.manager == true %>
+          <%= link_to "Minhas bases", my_bases_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
           <%= link_to "Inserir nova base", new_basis_path, class: "nav-link" %>
+        </li>
           <% else %>
+        <li class="nav-item active">
           <%= link_to "Meus pedidos", orders_path, class: "nav-link" %>
           <% end %>
         </li>
