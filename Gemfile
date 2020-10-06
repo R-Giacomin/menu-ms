@@ -38,8 +38,6 @@ gem 'faker'
 # gem 'pg_search', '~> 2.3.0'
 # Gem to be used to translate elasticSearch commands. Obs: we commented the pg_search gem
 gem 'searchkick', '~> 4.4.1'
-# gem para usar o twitter typeahead.js plugin
-# gem 'twitter-typeahead-rails'
 
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
