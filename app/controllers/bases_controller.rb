@@ -16,18 +16,21 @@ class BasesController < ApplicationController
   def new
     @base = Base.new
   end
-  
+
   def create
-    raise
     @base = Base.new(base_params)
-    @base.user = @user
+    @base.user = current_user
     if @base.save
-      redirect_to base_path(@base)
+      csv_file = params[:base][:import][:attachment]
+      CSV.foreach(csv_file.path) do |row|
+        puts "-----"
+        puts row
+      end  # o redirect estava errado!
+      redirect_to basis_path(@base)
     else
       render 'new'
     end
   end
-
 
   def autocomplete
     render json: Base.search(params[:search],
@@ -47,7 +50,7 @@ class BasesController < ApplicationController
   #   @rowarraydisp = CSV.read(myfile.path)
   # end
 
-  
+
 def import
   uploaded_file = params[:file]
   File.open(Rails.root.join('public', 'uploads', uploaded_file.original_filename), 'wb') do |file|
