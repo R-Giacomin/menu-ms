@@ -25,7 +25,7 @@ class BasesController < ApplicationController
       csv_file = params[:base][:import][:attachment]
       CSV.foreach(csv_file.path, csv_options) do |row|
         variable = Variable.create!(name: row[0], description: row[1], category: row[2], base: @base)
-      end  # o redirect estava errado!
+      end
       redirect_to basis_path(@base)
     else
       render 'new'
@@ -42,22 +42,6 @@ class BasesController < ApplicationController
       misspellings: { below: 5 }
     }).map(&:name)
   end
-
-  # def import
-  #   rowarray = Array.new
-  #   myfile = params[:file]
-
-  #   @rowarraydisp = CSV.read(myfile.path)
-  # end
-
-
-def import
-  uploaded_file = params[:file]
-  File.open(Rails.root.join('public', 'uploads', uploaded_file.original_filename), 'wb') do |file|
-    file.write(uploaded_file.read)
-  end
-end
-
 
   private
 

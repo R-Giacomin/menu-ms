@@ -14,7 +14,11 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
+          <% if current_user.manager == true %>
+          <%= link_to "Inserir nova base", new_basis_path, class: "nav-link" %>
+          <% else %>
           <%= link_to "Meus pedidos", orders_path, class: "nav-link" %>
+          <% end %>
         </li>
         <li class="nav-link">
           <strong> <%= current_user.name %> </strong>
