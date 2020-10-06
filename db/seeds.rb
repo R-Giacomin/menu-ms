@@ -1,4 +1,3 @@
-
 require 'csv'
 require 'faker'
 require 'cpf_faker'
@@ -7,6 +6,8 @@ require_relative 'seed_aux.rb'
 Variable.destroy_all
 Base.destroy_all
 User.destroy_all
+
+admin = User.create!(email: "admin@admin.com", password: '123456', name: Faker::Name.name, cpf: Faker::CPF.numeric, admin: true )
 
 manager1 = User.create!(email: "manager1@test.com", password: '123456', name: Faker::Name.name, cpf: Faker::CPF.numeric, manager: true )
 

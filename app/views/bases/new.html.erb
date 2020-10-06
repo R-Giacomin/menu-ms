@@ -1,38 +1,4 @@
-<div class="container">
-    <%= simple_form_for @base do |f| %>
-
-    <%= f.input :name, label: 'Nome da Base' %>
-    <%= f.input :description, label: 'Descrição' %>
-    <%= f.input :legal_base, label: 'Bases legais da LGPD para tratamento de dados', placeholder: 'Indique quais bases legais você utiliza para tratamento dos dados de saúde' %>
-    <%= f.input :technical_area, label: 'Área Técnica', placeholder: 'Indique a Secretaria do Ministério da Saúde que responde pela Base de Dados' %>
-    <%#= f.input :photo, as: :file, label: 'Logo da Base' %>
-
-    <%# Perguntar se o gestor deseja importar o dicionário de dados ou inserir os campos da sua base %>
-    <%# Se o gestor optar por importar o dicionário, form_tag Import, %>
-    <%# Se o gestor optar por inserir manualmente as variáveis: %>
-
-    <%= f.simple_fields_for :import do |g| %>
-      <%= g.input :attachment, as: :file %>
-    <% end %>
-
-        <%# if condition %>
-        <%#= form_tag({:action => :import}, multipart: true) do %>
-            <%#= file_field_tag :file %>
-            <%#= submit_tag( "Import" ) %>
-        <%# else %> 
-        <%#= simple_form_for @variable do |f| %>
-            <%#= f.input :name, label: 'Nome da Variável' %>
-            <%#= f.input :description, label: 'Descrição' %>
-            <%#= f.input :category, label: 'Categoria' %>
-            <%#= f.input :sensibility, label: 'Dado Sensível?' %>
-        <%# end %>  
-        <%# end %>
-    <%= f.button :submit, class: 'btn btn-primary btn-ms' %>
-    <% end %>
-</div>
-
-
-
+<%= render 'form', base: @base, locals: { btn_name: 'Cadastrar Base' }  %>
 
 
 
