@@ -32,7 +32,6 @@ class BasesController < ApplicationController
     end
   end
 
-
   def autocomplete
     render json: Base.search(params[:search],
     {
