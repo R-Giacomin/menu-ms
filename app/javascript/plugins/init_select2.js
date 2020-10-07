@@ -1,6 +1,12 @@
 import $ from 'jquery';
 import 'select2';
 const initSelect2 = () => {
+  const formatResult = (result) => {
+    console.log(result);
+    if (result.loading) return result.text;
+      var html = result.text;
+      return $(html);
+  };
   $('.select2_autocomplete').select2({
     language: {
       inputTooShort: function () { return ''; }
@@ -10,7 +16,9 @@ const initSelect2 = () => {
       dataType: 'json',
       delay: 250,
     },
-    placeholder: 'O que você procura?',
+    templateResult: formatResult,
+    templateSelection: formatResult,
+    // placeholder: 'O que você procura?',
     width: "80%",
     minimumInputLength: 3
   });
