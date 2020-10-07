@@ -30,7 +30,7 @@
       <p><strong>E-mail: </strong><%= @order.base.user.email %></p>
       <hr>
       <% if @order.category == "nIdentificado" %>
-        <p><strong>Categoria do pedido: </strong>Dados não identificados/p>
+        <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
       <% elsif @order.category == "identificado"%>
         <p><strong>Categoria do pedido: </strong>Dados identificados</p>
       <% else %>
@@ -39,8 +39,8 @@
 
       <p><strong>Período da solicitação: </strong><%= @order.period  %></p>
       <p>
-        <strong> <%= 'Justificativa: ' unless @order.pessoais? %> </strong>
-        <%= @order.justify unless @order.pessoais? %>
+        <strong> <%= 'Justificativa: ' if @order.identificado? %> </strong>
+        <%= @order.justify if @order.identificado? %>
       <h5><strong>Campos solicitados</strong></h5>
       </p>
       <% @order.items.each do |item| %>

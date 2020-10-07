@@ -1,5 +1,5 @@
 class BasesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_base, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -38,6 +38,13 @@ class BasesController < ApplicationController
     end
   end
 
+  def import
+    uploaded_file = params[:file]
+    File.open(Rails.root.join('public', 'uploads', uploaded_file.original_filename), 'wb') do |file|
+      file.write(uploaded_file.read)
+    end
+  end
+
   def edit
   end
 
@@ -62,17 +69,6 @@ class BasesController < ApplicationController
     end
   end
 
-  def autocomplete
-    render json: Base.search(params[:search],
-    {
-      fields: [:name, :description, :technical_area],
-      match: :word_start,
-      limit: 10,
-      load: false,
-      misspellings: { below: 5 }
-    }).map(&:name)
-  end
-
   private
 
   def set_base
@@ -80,7 +76,7 @@ class BasesController < ApplicationController
   end
 
   def base_params
-    params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :file)
+    params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :periodicity, :file)
     # Vamos colocar uma foto/logo da base?
   end
 end

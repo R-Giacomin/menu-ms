@@ -9,8 +9,6 @@ require("@rails/activestorage").start()
 require("channels")
 
 require("jquery")  // ****** Para fazer funcionar o JQUERY
-require("easy-autocomplete") // to add a plugin called EasyAutocomplete
-
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -28,10 +26,12 @@ require("easy-autocomplete") // to add a plugin called EasyAutocomplete
 // External imports
 import "bootstrap";
 
+import { initSelect2 } from '../plugins/init_select2';
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initSelect2();
+  initSelect2();
 });

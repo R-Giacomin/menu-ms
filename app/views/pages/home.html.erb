@@ -6,12 +6,11 @@
       <span id="banner-typed-text"></span>
     </p>
       <div class="text-center">
-        <%= form_tag bases_path, :method => "get" do %>
-          <%= text_field_tag :search, params[:search],
-          placeholder: "O que você procura?", class: "search" %>
+        <%= form_tag bases_path, id: "autocomplete-form", :method => "get" do %>
+          <%= select_tag :search, nil,
+          placeholder: "O que você procura?", class: "select2_autocomplete" %>
           <%= submit_tag("Buscar", :name => nil, class: "btn btn-ms") %>
         <% end %>
-
 
       </div>
   </div>
@@ -124,7 +123,7 @@
           <div class="card-body">
             <h5 class="card-title">Vacinação</h5>
             <p class="card-text">Perdi minha carteira de vacinação, o que faço agora?</p>
-            <br>            
+            <br>
           </div>
         </div>
       </div>
