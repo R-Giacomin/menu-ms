@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: %i[update edit show conclude_order cancel_order]
+
   def index
     @orders = Order.where(user_id: current_user.id)
   end
@@ -36,7 +37,7 @@ class OrdersController < ApplicationController
       redirect_to root_path, alert: 'Não autorizado'
     else
       if @order.update(strong_params)
-        redirect_to @order, notice: 'Pedido atualizado.'
+        redirect_to orders_path, notice: 'Pedido atualizado.'
       else
         render :edit
       end
@@ -56,7 +57,7 @@ class OrdersController < ApplicationController
   private
 
   def strong_params
-    params.require(:order).permit(:status, :justify, :category)
+    params.require(:order).permit(:status, :justify, :category, :period)
   end
 
   def set_order
