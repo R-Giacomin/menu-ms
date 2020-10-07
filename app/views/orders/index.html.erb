@@ -1,5 +1,4 @@
 <div class="container mt-5">
-  <h3>Pedidos de <%= current_user.name%></h3>
   <hr>
   <div class="row mt-2">
     <div class="col">
@@ -22,11 +21,11 @@
 
           <% if order.aberta? %>
             <%= link_to 'Concluir', conclude_order_path(order),
-               data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-dark" %>
+               data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-ms" %>
             <%= link_to 'Cancelar', cancel_order_path(order),
-               data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-dark" %>
+               data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-ms" %>
           <% end %>
-          <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-dark" %>
+          <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-ms" %>
         <hr>
       <% end %>
     </div>

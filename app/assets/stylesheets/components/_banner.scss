@@ -35,7 +35,7 @@
   }
 
   .banner2 {
-    background-color: #f3e6e3;
+    background-color:white;
     text-align: center;
     height: 400px;
     background-size: cover;
@@ -43,4 +43,12 @@
     display: flex;
     // align-items: center;
     justify-content: center;
+  }
+
+  .banner2 h2 {
+    color:  #6A3270;
+  }
+
+  .banner2 p {
+    color: #9072A7;
   }
