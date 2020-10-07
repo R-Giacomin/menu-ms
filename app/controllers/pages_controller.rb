@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :autocomplete]
+  skip_before_action :authenticate_user!, only: [:home, :autocomplete, :about_us]
   def home; end
 
   def autocomplete
