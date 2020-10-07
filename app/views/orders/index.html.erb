@@ -11,27 +11,22 @@
         </p>
         <h4>
           <strong>Nome da Base: </strong><%= order.base.name if order.items.count.positive? %></h4>
-        <p><strong>Situação: </strong><%= order.status %></p>
+        <p <%= "class=#{order.status}" %>><strong>Situação: </strong><%= order.status %></p>
         <% if order.category == "nIdentificado" %>
-        <p><strong>Categoria do pedido: </strong>Dados não identificados/p>
+        <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
         <% elsif order.category == "identificado"%>
           <p><strong>Categoria do pedido: </strong>Dados identificados</p>
         <% else %>
            <p><strong>Categoria do pedido: </strong>Dados pessoais</p>
         <% end %>
 
-        <p><strong>Periodicidade: </strong><%= order.base.periodicity  %></p>
-        <p>
-          <strong> <%= 'Justificativa: ' unless order.pessoais? %> </strong>
-          <%= order.justify unless order.pessoais? %>
-        </p>
-          <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-dark" %>
           <% if order.aberta? %>
             <%= link_to 'Concluir', conclude_order_path(order),
                data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-dark" %>
             <%= link_to 'Cancelar', cancel_order_path(order),
                data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-dark" %>
           <% end %>
+          <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-dark" %>
         <hr>
       <% end %>
     </div>

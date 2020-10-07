@@ -19,9 +19,10 @@
       <hr>
 
       <%= simple_form_for @order do |f| %>
-      <p><strong>Periodicidade: </strong><%= @order.base.periodicity  %></p>
-      <%= f.input :period, label: 'Período solicitado' %>
-      <%= f.input :justify, label: 'Justificativa do pedido' %>
+      <%= f.input :period, label: "Período solicitado (considere que a periodicidade da base é: #{@order.base.periodicity})", placeholder: 'Ex.: de 01/2018 a 12/2018 (se a base for mensal) ou 2016 a 2018 (se a base for anual) ou apenas 2017' %>
+      <% if @order.category == "identificado" %>
+      <%= f.input :justify, label: 'Justificativa do pedido (informar a finalidade do uso dos dados)', placeholder: 'Justificativa para a necessidade de acesso aos dados para a realização do estudo ou pesquisa e motivos que justifiquem a necessidade da informação identificada' %>
+      <% end %>
       <%= f.button :submit, class: "btn btn-dark" %>
     <% end %>
       <%= link_to 'Ir para Pedidos', orders_path, class: "btn btn-dark" %>

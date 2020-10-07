@@ -14,9 +14,13 @@
     </div>
 
     <div class="col-sm-2">
-      <% if current_user.manager == true && current_user.id == @base.user.id %>
-        <%= link_to 'Editar', edit_basis_path(@base), class: "btn btn-dark" %>
-        <%= link_to "Deletar", basis_path(@base), method: :delete, data: { confirm: 'Tem certeza que deseja excluir essa base?' }, class: "btn btn-dark" %>
+      <% if user_signed_in? %>
+        <% if current_user.manager == true && current_user.id == @base.user.id %>
+          <%= link_to 'Editar', edit_basis_path(@base), class: "btn btn-dark" %>
+          <%= link_to "Deletar", basis_path(@base), method: :delete, data: { confirm: 'Tem certeza que deseja excluir essa base?' }, class: "btn btn-dark" %>
+        <% else %>
+          <%= link_to 'Solicitar dados', create_order_path(@base,category: "pessoais"), id: "pedido", class: "btn btn-dark" %>
+        <% end %>
       <% else %>
         <%= link_to 'Solicitar dados', create_order_path(@base,category: "pessoais"), id: "pedido", class: "btn btn-dark" %>
       <% end %>

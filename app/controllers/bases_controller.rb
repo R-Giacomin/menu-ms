@@ -1,5 +1,5 @@
 class BasesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_base, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -76,7 +76,7 @@ class BasesController < ApplicationController
   end
 
   def base_params
-    params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :file)
+    params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :periodicity, :file)
     # Vamos colocar uma foto/logo da base?
   end
 end

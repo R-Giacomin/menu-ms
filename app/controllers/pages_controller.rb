@@ -25,5 +25,7 @@ class PagesController < ApplicationController
       "results": results
     }
     render json: result.to_json
+
+  def about_us
   end
 end
