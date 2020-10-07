@@ -9,7 +9,7 @@
         <%= form_tag bases_path, :method => "get" do %>
           <%= text_field_tag :search, params[:search],
           placeholder: "O que você procura?", class: "search" %>
-          <%= submit_tag("Buscar", :name => nil, class: "btn btn-primary btn-ms") %>
+          <%= submit_tag("Buscar", :name => nil, class: "btn btn-ms") %>
         <% end %>
 
 
@@ -29,7 +29,8 @@
               <h2>O que são dados de saúde?</h2>
               <p>São dados relativos ao seu estado de saúde,
               que revelem informações sobre a sua saúde física ou mental,
-              no passado, presente ou futuro.
+              no passado, presente ou futuro. O atendimento de qualidade requer boas 
+              informações, por isso é muito importante que essas informações sejam registradas. 
               </p>
             </div>
 
@@ -61,22 +62,24 @@
     <div class="card col-6 mb-3 mr-3 flip-card" style="max-width: 540px;">
       <div class="row no-gutters flip">
       <div class="front row">
-        <div class="col-md-4 p-0">
-          <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="...">
+        <%# <div class="col-md-4 p-0">
+          <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="..."> %>
+        <div class="col-md-4 p-0 center" style="background-image: url('<%= image_path 'Hospital.jpeg', class: "card-img center"  %>')">
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Internação Hospitalar</h5>
-            <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
-            </p>
+            <p class="card-text">Sofri um acidente e fiquei hospitalizado por muitos dias. O que aconteceu enquanto estive internado?</p>
             <br>            
           </div>
         </div>
       </div>
       <div class="back row">
           <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar 🏥</h5>
-            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados ao Ministério da Saúde.</p>
+            <h5 class="card-title">Internação Hospitalar</h5>
+            <p class="card-text">As informações sobre sua saúde são registradas quando você recebe cuidados de saúde. 
+            Cada estabelecimento com a qual você tem contato mantém seus próprios registros sobre você. 
+            Alguns dados foram enviados ao Ministério da Saúde.</p>
             <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
           </div>
       </div>
@@ -86,23 +89,25 @@
     <div class="card col-6 mb-3 ml-3 flip-card" style="max-width: 540px;">
       <div class="row no-gutters flip">
       <div class="front row">
-        <div class="col-md-4 p-0">
-          <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="...">
+        <%# <div class="col-md-4 p-0"> %>
+        <div class="col-md-4 p-0 center" style="background-image: url('<%= image_path 'consulta.jpeg', class: "card-img center"  %>')">
+          <%# <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="..."> %>
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar</h5>
-            <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
-            </p>
+            <h5 class="card-title">Atendimento de Saúde</h5>
+            <p class="card-text">No último ano tenho ficado muito doente. Quantas vezes fui atendida no posto de saúde?</p>
             <br>            
           </div>
         </div>
       </div>
       <div class="back row">
           <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar 🏥</h5>
-            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados ao Ministério da Saúde.</p>
-            <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
+            <h5 class="card-title">Atendimento de saúde </h5>
+            <p class="card-text">As informações sobre sua saúde são registradas quando você recebe cuidados de saúde. 
+            Cada estabelecimento com a qual você tem contato mantém seus próprios registros sobre você. 
+            Alguns dados foram enviados ao Ministério da Saúde.</p>
+            <%= link_to "Conheça os dados nacionais de contatos assistenciais", bases_path(search: "cmd") %>
           </div>
       </div>
       </div>
@@ -111,8 +116,9 @@
     <div class="card col-6 mb-3 mr-3 flip-card" style="max-width: 540px;">
       <div class="row no-gutters flip">
       <div class="front row">
-        <div class="col-md-4 p-0">
-          <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="...">
+        <%# <div class="col-md-4 p-0"> %>
+          <div class="col-md-4 p-0 center" style="background-image: url('<%= image_path 'Vacina.jpeg', class: "card-img center"  %>')">
+          <%# <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="..."> %>
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -125,8 +131,10 @@
       <div class="back row">
           <div class="card-body">
             <h5 class="card-title">Vacinação</h5>
-            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados ao Ministério da Saúde.</p>
-            <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
+            <p class="card-text">As informações sobre sua saúde são registradas quando você recebe cuidados de saúde. 
+            Cada estabelecimento com a qual você tem contato mantém seus próprios registros sobre você. 
+            Alguns dados foram enviados ao Ministério da Saúde.</p>
+            <%= link_to "Conheça os dados nacionais de imunização", bases_path(search: "vacina") %>
           </div>
       </div>
       </div>
@@ -135,110 +143,31 @@
     <div class="card col-6 mb-3 ml-3 flip-card" style="max-width: 540px;">
       <div class="row no-gutters flip">
       <div class="front row">
-        <div class="col-md-4 p-0">
-          <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar</h5>
-            <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
-            </p>
-            <br>            
-          </div>
-        </div>
-      </div>
-      <div class="back row">
-          <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar 🏥</h5>
-            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados ao Ministério da Saúde.</p>
-            <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
-          </div>
-      </div>
-      </div>
-    </div>
-
-    <div class="card col-6 mb-3 mr-3 flip-card" style="max-width: 540px;">
-      <div class="row no-gutters flip">
-      <div class="front row">
-        <div class="col-md-4 p-0">
-          <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar</h5>
-            <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
-            </p>
-            <br>            
-          </div>
-        </div>
-      </div>
-      <div class="back row">
-          <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar 🏥</h5>
-            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados ao Ministério da Saúde.</p>
-            <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
-          </div>
-      </div>
-      </div>
-    </div>
-    
-    <div class="card col-6 mb-3 ml-3 flip-card" style="max-width: 540px;">
-      <div class="row no-gutters flip">
-      <div class="front row">
-        <div class="col-md-4 p-0">
-          <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar</h5>
-            <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
-            </p>
-            <br>            
-          </div>
-        </div>
-      </div>
-      <div class="back row">
-          <div class="card-body">
-            <h5 class="card-title">Internação Hospitalar 🏥</h5>
-            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados ao Ministério da Saúde.</p>
-            <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
-          </div>
-      </div>
-      </div>
-    </div>
-    
-
-
-
-    <div class="card col-6 mb-3 mr-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="https://static.ricmais.com.br/uploads/2020/05/vacina-sarampo-curitiba-1.jpg" class="card-img mt-5" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Vacinação</h5>
-            <p class="card-text">Perdi minha carteira de vacinação, o que faço agora?</p>
-            <p class="card-text"><small class="text-muted">Obtenha dados de imunização</small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card col-6 mb-3 ml-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="https://folhadolitoral.com.br/wp-content/uploads/2020/07/4fag_aom_1594412395.jpg" class="card-img mt-5" alt="...">
+        <div class="col-md-4 p-0 center" style="background-image: url('<%= image_path 'Vacina.jpeg', class: "card-img center"  %>')">
+        <%# <div class="col-md-4 p-0">
+          <img src="https://www.sistemasulseguros.com.br/wp-content/uploads/seguro-interna%C3%A7%C3%A3o-hospitalar-prudential.jpg" class="card-img" alt="..."> %>
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Novo coronavírus</h5>
-            <p class="card-text">Fui num laboratório e fiz o exame para Covid. Meu resultado saiu positivo. Será que foi contabilizado?</p>
-            <p class="card-text"><small class="text-muted"> Obtenha dados de resultados para o Coronavírus </small></p>
+            <p class="card-text">As informações sobre sua saúde são registradas quando você realiza exames. 
+            Cada estabelecimento com a qual você tem contato mantém seus próprios registros sobre você. 
+            Alguns dados foram enviados ao Ministério da Saúde.</p>
+            <br>            
           </div>
         </div>
+      </div>
+      <div class="back row">
+          <div class="card-body">
+            <h5 class="card-title">Novo coronavírus</h5>
+            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados ao Ministério da Saúde.</p>
+            <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
+          </div>
+      </div>
       </div>
     </div>
   </div>
 </div>
+
+    
 
