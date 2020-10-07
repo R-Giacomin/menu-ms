@@ -1,5 +1,6 @@
 <div class="container mt-5">
   <div class="center-content">
+  <%= link_to "Cancelar solicitação", order_path(@order), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar essa solicitação?' }, class: "btn btn-dark" %>
   <h1>Formulário de solicitação de base de dados</h1>
   <% if @order.category == "nIdentificado" %>
     <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
@@ -23,15 +24,19 @@
       <p><strong>E-mail: </strong><%= @order.base.user.email %></p>
       <hr>
 
+      <%= content_for(:the_links) do %>
+      Aceitar <%= link_to "Termo de responsabilidade e responsabilidade", terms_path(@order) %>
+      <% end %>
+
       <%= simple_form_for @order do |f| %>
       <%= f.input :period, label: "Período solicitado: (considere que a periodicidade da base é #{@order.base.periodicity})", placeholder: 'Ex.: de 01/2018 a 12/2018 (se a base for mensal) ou 2016 a 2018 (se a base for anual) ou apenas 2017' %>
       <% if @order.category == "identificado" %>
       <%= f.input :justify, label: 'Justificativa do pedido (informar a finalidade do uso dos dados)', placeholder: 'Justificativa para a necessidade de acesso aos dados para a realização do estudo ou pesquisa e motivos que justifiquem a necessidade da informação identificada' %>
+      <%= f.input :terms, label: content_for(:the_links)%>
       <% end %>
-      <%= f.button :submit, class: "btn btn-dark" %>
-    <% end %>
-    <br>
-      <%= link_to 'Ir para Pedidos', orders_path, class: "btn btn-dark" %>
+      <%= f.button :submit, "Salvar formulário do pedido", class: "btn btn-dark" %>
+      <% end%>
+
       <br>
       <br>
       <h5><strong>Campos solicitados</strong></h5>

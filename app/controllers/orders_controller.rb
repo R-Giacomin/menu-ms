@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[update edit show conclude_order cancel_order]
+  before_action :set_order, only: %i[update edit show destroy conclude_order cancel_order terms]
 
   def index
     @orders = Order.where(user_id: current_user.id)
@@ -29,7 +29,6 @@ class OrdersController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -44,6 +43,15 @@ class OrdersController < ApplicationController
     end
   end
 
+  def destroy
+    if @order.user != current_user
+      redirect_to root_path, alert: 'Não autorizado'
+    else
+      @order.destroy
+      redirect_to orders_path, notice: 'Pedido excluído.'
+    end
+  end
+
   def conclude_order
     @order.concluida!
     redirect_to orders_path
@@ -54,10 +62,14 @@ class OrdersController < ApplicationController
     redirect_to orders_path
   end
 
+  def terms
+
+  end
+
   private
 
   def strong_params
-    params.require(:order).permit(:status, :justify, :category, :period)
+    params.require(:order).permit(:status, :justify, :category, :period, :terms)
   end
 
   def set_order

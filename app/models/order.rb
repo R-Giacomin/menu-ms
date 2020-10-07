@@ -8,6 +8,7 @@ class Order < ApplicationRecord
 
   validates :period, presence: true, on: :update
   validates :justify, presence: true, on: :update, if: :identificado?
+  validates :terms, acceptance: true, on: :update, if: :identificado?
 
   def base
     self.variables.first.base
@@ -16,5 +17,4 @@ class Order < ApplicationRecord
   def identificado?
     self.category == "identificado"
   end
-
 end
