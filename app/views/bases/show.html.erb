@@ -9,16 +9,16 @@
     <%= link_to 'Voltar', :back, class: "btn btn-dark" %>
     </div>
 
-    <div class="col-sm-8">
-
+    <div class="col-sm-8 periodicity">
+      <h4>Periodicidade da base: <strong> <%= @base.periodicity %> </strong></h4>
     </div>
 
     <div class="col-sm-2">
       <% if current_user.manager == true && current_user.id == @base.user.id %>
-      <%= link_to 'Editar', edit_basis_path(@base), class: "btn btn-dark" %>
-      <%= link_to "Deletar", basis_path(@base), method: :delete, data: { confirm: 'Tem certeza que deseja excluir essa base?' }, class: "btn btn-dark" %>
+        <%= link_to 'Editar', edit_basis_path(@base), class: "btn btn-dark" %>
+        <%= link_to "Deletar", basis_path(@base), method: :delete, data: { confirm: 'Tem certeza que deseja excluir essa base?' }, class: "btn btn-dark" %>
       <% else %>
-      <%= link_to 'Solicitar meus dados', create_order_path(@base), id: "pedido", class: "btn btn-dark" %>
+        <%= link_to 'Solicitar dados', create_order_path(@base,category: "pessoais"), id: "pedido", class: "btn btn-dark" %>
       <% end %>
     </div>
   </div>
@@ -115,8 +115,6 @@
       url += "?category=pessoais";
       criarPedido.href = url;
       url = url.split("?")[0];
-      console.log(url);
-      console.log(criarPedido)
     }
   })
   identificado.addEventListener("click", (e) => {
@@ -124,8 +122,6 @@
       url += "?category=identificado";
       criarPedido.href = url;
       url = url.split("?")[0];
-      console.log(url);
-      console.log(criarPedido)
     }
   })
   nIdentificado.addEventListener("click", (e) => {
@@ -133,8 +129,6 @@
       url += "?category=nIdentificado";
       criarPedido.href = url;
       url = url.split("?")[0];
-      console.log(url);
-      console.log(criarPedido)
     }
   })
 </script>

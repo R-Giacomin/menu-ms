@@ -1,6 +1,6 @@
 class BasesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_base, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     if params[:search].present?
@@ -83,5 +83,4 @@ class BasesController < ApplicationController
     params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :file)
     # Vamos colocar uma foto/logo da base?
   end
-
 end

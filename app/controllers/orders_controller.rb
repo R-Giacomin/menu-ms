@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[update show conclude_order cancel_order]
+  before_action :set_order, only: %i[update edit show conclude_order cancel_order]
   def index
     @orders = Order.where(user_id: current_user.id)
   end
@@ -26,7 +26,21 @@ class OrdersController < ApplicationController
     redirect_to "#{orders_path}/#{@order.id}"
   end
 
-  def update; end
+  def edit
+
+  end
+
+  def update
+    if @order.user != current_user
+      redirect_to root_path, alert: 'Não autorizado'
+    else
+      if @order.update(strong_params)
+        redirect_to @order, notice: 'Pedido atualizado.'
+      else
+        render :edit
+      end
+    end
+  end
 
   def conclude_order
     @order.concluida!

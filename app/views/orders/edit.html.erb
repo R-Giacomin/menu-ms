@@ -1,25 +1,13 @@
 <div class="container mt-5">
   <div class="center-content">
-    <h4>
-      <strong>Pedido</strong> <span Style="color:darkred">
-        <%= " nº #{@order.id} de #{@date_time.strftime('%d/%m/%Y às %H:%M')}" %></span>
-    </h4>
-      <p><strong>Situação: </strong><%= @order.status %></p>
-    <p>
-      <% if @order.aberta? %>
-        <%= link_to 'Editar', edit_order_path(@order), class: "btn btn-dark" %>
-        <%= link_to 'Concluir', conclude_order_path(@order),
-           data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-dark" %>
-        <%= link_to 'Cancelar', cancel_order_path(@order),
-           data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-dark" %>
-      <% end %>
-      <%= link_to 'Ir para Pedidos', orders_path, class: "btn btn-dark" %>
-    </p>
+
+
   <h1>Formulário de solicitação de base de dados</h1>
   </div>
   <hr>
   <div class="row mt-2">
     <div class="col">
+
       <h5><strong>Nome da Base: </strong><%= @order.base.name if @order.items.count.positive? %></h5>
       <hr>
       <p><strong>Solicitante: </strong><%= @order.user.name  %></p>
@@ -29,15 +17,16 @@
       <p><strong>Responsável pela base: </strong><%= "#{@order.base.user.name} - #{@order.base.technical_area}." %></p>
       <p><strong>E-mail: </strong><%= @order.base.user.email %></p>
       <hr>
-      <% if @order.category == "nIdentificado" %>
-        <p><strong>Categoria do pedido: </strong>Dados não identificados/p>
-      <% elsif @order.category == "identificado"%>
-        <p><strong>Categoria do pedido: </strong>Dados identificados</p>
-      <% else %>
-         <p><strong>Categoria do pedido: </strong>Dados pessoais</p>
-      <% end %>
 
-      <p><strong>Período da solicitação: </strong><%= @order.period  %></p>
+      <%= simple_form_for @order do |f| %>
+      <p><strong>Periodicidade: </strong><%= @order.base.periodicity  %></p>
+      <%= f.input :period, label: 'Período solicitado' %>
+      <%= f.input :justify, label: 'Justificativa do pedido' %>
+      <%= f.button :submit, class: "btn btn-dark" %>
+    <% end %>
+      <%= link_to 'Ir para Pedidos', orders_path, class: "btn btn-dark" %>
+
+
       <p>
         <strong> <%= 'Justificativa: ' unless @order.pessoais? %> </strong>
         <%= @order.justify unless @order.pessoais? %>
@@ -55,3 +44,4 @@
     </div>
   </div>
 </div>
+
