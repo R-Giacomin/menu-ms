@@ -30,7 +30,7 @@
       <p><strong>E-mail: </strong><%= @order.base.user.email %></p>
       <hr>
       <% if @order.category == "nIdentificado" %>
-        <p><strong>Categoria do pedido: </strong>Dados não identificados/p>
+        <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
       <% elsif @order.category == "identificado"%>
         <p><strong>Categoria do pedido: </strong>Dados identificados</p>
       <% else %>
