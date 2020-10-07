@@ -23,7 +23,8 @@ class OrdersController < ApplicationController
         Item.create!(variable_id: variable.id, order_id: @order.id)
       end
     end
-    redirect_to "#{orders_path}/#{@order.id}"
+    # redirect_to "#{orders_path}/#{@order.id}"
+    redirect_to edit_order_path(@order)
   end
 
   def edit
