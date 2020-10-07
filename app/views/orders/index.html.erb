@@ -11,7 +11,7 @@
         </p>
         <h4>
           <strong>Nome da Base: </strong><%= order.base.name if order.items.count.positive? %></h4>
-        <p><strong>Situação: </strong><%= order.status %></p>
+        <p <%= "class=#{order.status}" %>><strong>Situação: </strong><%= order.status %></p>
         <% if order.category == "nIdentificado" %>
         <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
         <% elsif order.category == "identificado"%>
@@ -20,11 +20,6 @@
            <p><strong>Categoria do pedido: </strong>Dados pessoais</p>
         <% end %>
 
-        <p><strong>Periodicidade: </strong><%= order.base.periodicity  %></p>
-        <p>
-          <strong> <%= 'Justificativa: ' unless order.pessoais? %> </strong>
-          <%= order.justify unless order.pessoais? %>
-        </p>
           <% if order.aberta? %>
             <%= link_to 'Concluir', conclude_order_path(order),
                data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-dark" %>

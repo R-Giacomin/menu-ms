@@ -39,8 +39,8 @@
 
       <p><strong>Período da solicitação: </strong><%= @order.period  %></p>
       <p>
-        <strong> <%= 'Justificativa: ' unless @order.pessoais? %> </strong>
-        <%= @order.justify unless @order.pessoais? %>
+        <strong> <%= 'Justificativa: ' if @order.identificado? %> </strong>
+        <%= @order.justify if @order.identificado? %>
       <h5><strong>Campos solicitados</strong></h5>
       </p>
       <% @order.items.each do |item| %>
