@@ -19,14 +19,16 @@
     Data da Notificação ;Data de preenchimento da ficha de notificação. Campo Chave. ;não cadastral;</p>
 
     <%= simple_form_for @base do |f| %>
+    <%= f.error_notification %>
 
     <%= f.input :name, label: 'Nome da Base' %>
     <%= f.input :description, label: 'Descrição' %>
     <%= f.input :legal_base, label: 'Bases legais da LGPD para tratamento de dados', placeholder: 'Indique quais bases legais você utiliza para tratamento dos dados de saúde' %>
     <%= f.input :technical_area, label: 'Área Técnica', placeholder: 'Indique a Secretaria do Ministério da Saúde que responde pela Base de Dados' %>
     <%#= f.input :photo, as: :file, label: 'Logo da Base' %>
+    <%= f.input :periodicity, collection: [ "diário", "mensal", "bimestral", "trimestral", "quadrimestral", "semestral", "anual"],:label => "Periodicidade", prompt: "Selecione" %>
     <%= f.simple_fields_for :import do |g| %>
-      <%= g.input :attachment, as: :file, label: 'Dicionário de dados em csv' %>
+     <%= g.input :attachment, as: :file, label: 'Dicionário de dados em csv' %>
     <% end %>
     <%= f.button :submit, "#{btn_name}", class: "btn btn-dark" %>
     <% end %>

@@ -80,7 +80,7 @@ class BasesController < ApplicationController
   end
 
   def base_params
-    params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :file)
+    params.require(:base).permit(:name, :description, :legal_base, :user_id, :technical_area, :periodicity, :file)
     # Vamos colocar uma foto/logo da base?
   end
 end
