@@ -14,17 +14,18 @@ class PagesController < ApplicationController
         @variables.each do |variable|
           text += "\n\t -->#{variable.name} --> descrição: #{variable.description}"
         end
-      result = {
-        "id": params[:q],
-        "text": text
-      }
-      results << result
-    end
+        result = {
+          "id": params[:q],
+          "text": text
+        }
+        results << result
+      end
 
     result = {
       "results": results
     }
     render json: result.to_json
+  end
 
   def about_us
   end
