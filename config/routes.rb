@@ -7,9 +7,6 @@ Rails.application.routes.draw do
   get 'about_us', to: 'pages#about_us'
 
   resources :bases do
-    collection do
-      get 'autocomplete'
-    end
     resources :items, only: [:create]
     member do
       get 'import'
@@ -25,6 +22,8 @@ Rails.application.routes.draw do
   get "/cancel_order/:id", to: "orders#cancel_order", as: :cancel_order
   get "/items/:id", to: "items#destroy", as: :delete_item
   get "/create_order/:id", to: "orders#create", as: :create_order
+
+  get 'autocomplete', to: "pages#autocomplete"
 
   root to: 'pages#home'
 end

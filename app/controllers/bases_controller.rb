@@ -38,6 +38,13 @@ class BasesController < ApplicationController
     end
   end
 
+  def import
+    uploaded_file = params[:file]
+    File.open(Rails.root.join('public', 'uploads', uploaded_file.original_filename), 'wb') do |file|
+      file.write(uploaded_file.read)
+    end
+  end
+
   def edit
   end
 
@@ -60,17 +67,6 @@ class BasesController < ApplicationController
       @base.destroy
       redirect_to bases_path, notice: 'Base excluída.'
     end
-  end
-
-  def autocomplete
-    render json: Base.search(params[:search],
-    {
-      fields: [:name, :description, :technical_area],
-      match: :word_start,
-      limit: 10,
-      load: false,
-      misspellings: { below: 5 }
-    }).map(&:name)
   end
 
   private

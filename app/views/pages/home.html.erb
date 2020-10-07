@@ -6,12 +6,11 @@
       <span id="banner-typed-text"></span>
     </p>
       <div class="text-center">
-        <%= form_tag bases_path, :method => "get" do %>
-          <%= text_field_tag :search, params[:search],
-          placeholder: "O que você procura?", class: "search" %>
+        <%= form_tag bases_path, id: "autocomplete-form", :method => "get" do %>
+          <%= select_tag :search, nil,
+          placeholder: "O que você procura?", class: "select2_autocomplete" %>
           <%= submit_tag("Buscar", :name => nil, class: "btn btn-primary btn-ms") %>
         <% end %>
-
 
       </div>
   </div>
@@ -69,7 +68,7 @@
             <h5 class="card-title">Internação Hospitalar</h5>
             <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
             </p>
-            <br>            
+            <br>
           </div>
         </div>
       </div>
@@ -94,7 +93,7 @@
             <h5 class="card-title">Internação Hospitalar</h5>
             <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
             </p>
-            <br>            
+            <br>
           </div>
         </div>
       </div>
@@ -118,7 +117,7 @@
           <div class="card-body">
             <h5 class="card-title">Vacinação</h5>
             <p class="card-text">Perdi minha carteira de vacinação, o que faço agora?</p>
-            <br>            
+            <br>
           </div>
         </div>
       </div>
@@ -143,7 +142,7 @@
             <h5 class="card-title">Internação Hospitalar</h5>
             <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
             </p>
-            <br>            
+            <br>
           </div>
         </div>
       </div>
@@ -168,7 +167,7 @@
             <h5 class="card-title">Internação Hospitalar</h5>
             <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
             </p>
-            <br>            
+            <br>
           </div>
         </div>
       </div>
@@ -181,7 +180,7 @@
       </div>
       </div>
     </div>
-    
+
     <div class="card col-6 mb-3 ml-3 flip-card" style="max-width: 540px;">
       <div class="row no-gutters flip">
       <div class="front row">
@@ -193,7 +192,7 @@
             <h5 class="card-title">Internação Hospitalar</h5>
             <p class="card-text">Sofri um acidente e fiquei hospilalizado por muitos dias. O que aconteceu enquanto estive internado?
             </p>
-            <br>            
+            <br>
           </div>
         </div>
       </div>
@@ -206,7 +205,7 @@
       </div>
       </div>
     </div>
-    
+
 
 
 
