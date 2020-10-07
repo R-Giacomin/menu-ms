@@ -12,6 +12,12 @@
           <%= submit_tag("Buscar", :name => nil, class: "btn btn-primary btn-ms") %>
         <% end %>
 
+      <!-- Novo form com autocomplete -->
+        <%= form_tag bases_path, :method => "get" do %>
+          <%= select_tag :search, nil,
+          placeholder: "O que você procura?", class: "select2_autocomplete" %>
+          <%= submit_tag("Buscar", :name => nil, class: "btn btn-primary btn-ms") %>
+        <% end %>
 
       </div>
   </div>

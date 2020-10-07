@@ -12,6 +12,5 @@ class Base < ApplicationRecord
     },
     using: {
       tsearch: { prefix: true }
-    }
-
+      }
 end
