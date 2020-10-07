@@ -6,7 +6,7 @@
 
     <div class="col-sm-2">
 
-    <%= link_to 'Voltar', :back, class: "btn btn-dark" %>
+    <%= link_to 'Voltar', :back, class: "btn btn-ms" %>
     </div>
 
     <div class="col-sm-8 periodicity">
@@ -16,13 +16,13 @@
     <div class="col-sm-2">
       <% if user_signed_in? %>
         <% if current_user.manager == true && current_user.id == @base.user.id %>
-          <%= link_to 'Editar', edit_basis_path(@base), class: "btn btn-dark" %>
-          <%= link_to "Deletar", basis_path(@base), method: :delete, data: { confirm: 'Tem certeza que deseja excluir essa base?' }, class: "btn btn-dark" %>
+          <%= link_to 'Editar', edit_basis_path(@base), class: "btn btn-ms" %>
+          <%= link_to "Deletar", basis_path(@base), method: :delete, data: { confirm: 'Tem certeza que deseja excluir essa base?' }, class: "btn btn-ms" %>
         <% else %>
-          <%= link_to 'Solicitar dados', create_order_path(@base,category: "pessoais"), id: "pedido", class: "btn btn-dark" %>
+          <%= link_to 'Solicitar dados', create_order_path(@base,category: "pessoais"), id: "pedido", class: "btn btn-ms" %>
         <% end %>
       <% else %>
-        <%= link_to 'Solicitar dados', create_order_path(@base,category: "pessoais"), id: "pedido", class: "btn btn-dark" %>
+        <%= link_to 'Solicitar dados', create_order_path(@base,category: "pessoais"), id: "pedido", class: "btn btn-ms" %>
       <% end %>
     </div>
   </div>
@@ -31,7 +31,7 @@
 <section id="tabs" class="project-tab">
       <div class="container">
           <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 text-purplef">
                   <nav>
                       <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                           <a class="nav-item nav-link active" id="nav-pessoais-tab" data-toggle="tab" href="#nav-pessoais" role="tab" aria-controls="nav-pessoais" aria-selected="true" category="pessoais">Dados pessoais</a>
