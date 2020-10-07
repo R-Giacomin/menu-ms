@@ -1,8 +1,13 @@
 <div class="container mt-5">
   <div class="center-content">
-
-
   <h1>Formulário de solicitação de base de dados</h1>
+  <% if @order.category == "nIdentificado" %>
+    <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
+  <% elsif @order.category == "identificado"%>
+    <p><strong>Categoria do pedido: </strong>Dados identificados</p>
+  <% else %>
+    <p><strong>Categoria do pedido: </strong>Dados pessoais</p>
+  <% end %>
   </div>
   <hr>
   <div class="row mt-2">
@@ -19,19 +24,18 @@
       <hr>
 
       <%= simple_form_for @order do |f| %>
-      <%= f.input :period, label: "Período solicitado (considere que a periodicidade da base é: #{@order.base.periodicity})", placeholder: 'Ex.: de 01/2018 a 12/2018 (se a base for mensal) ou 2016 a 2018 (se a base for anual) ou apenas 2017' %>
+      <%= f.input :period, label: "Período solicitado: (considere que a periodicidade da base é #{@order.base.periodicity})", placeholder: 'Ex.: de 01/2018 a 12/2018 (se a base for mensal) ou 2016 a 2018 (se a base for anual) ou apenas 2017' %>
       <% if @order.category == "identificado" %>
       <%= f.input :justify, label: 'Justificativa do pedido (informar a finalidade do uso dos dados)', placeholder: 'Justificativa para a necessidade de acesso aos dados para a realização do estudo ou pesquisa e motivos que justifiquem a necessidade da informação identificada' %>
       <% end %>
       <%= f.button :submit, class: "btn btn-dark" %>
     <% end %>
+    <br>
       <%= link_to 'Ir para Pedidos', orders_path, class: "btn btn-dark" %>
-
-
-      <p>
-        <strong> <%= 'Justificativa: ' unless @order.pessoais? %> </strong>
-        <%= @order.justify unless @order.pessoais? %>
+      <br>
+      <br>
       <h5><strong>Campos solicitados</strong></h5>
+
       </p>
       <% @order.items.each do |item| %>
         <p style="margin-left: 20px">
