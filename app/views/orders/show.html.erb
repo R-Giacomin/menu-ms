@@ -45,11 +45,7 @@
       </p>
       <% @order.items.each do |item| %>
         <p style="margin-left: 20px">
-          <%= link_to delete_item_path(item), method: :delete, data: { confirm: 'Confirma a exclusão desse item?' } do %>
-            <i class="fa fa-trash"></i>
-          <% end %>
           <%=" ✔ #{item.variable.name}" %>
-
           </p>
       <% end %>
     </div>

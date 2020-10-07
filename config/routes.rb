@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :orders, only: [:index, :show, :create, :edit, :update]
+  resources :orders
 
   resources :items, only: [:destroy]
 
@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get "/cancel_order/:id", to: "orders#cancel_order", as: :cancel_order
   get "/items/:id", to: "items#destroy", as: :delete_item
   get "/create_order/:id", to: "orders#create", as: :create_order
+  get "/terms/:id", to: "orders#terms", as: :terms
 
   get 'autocomplete', to: "pages#autocomplete"
 
