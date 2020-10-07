@@ -7,15 +7,18 @@ class PagesController < ApplicationController
       results = []
       sql_query = "name @@ :query OR description @@ :query"
       @bases.each do |base|
-        text = base.name
+        text = "<div>"
+        text += base.name
         @variables = base.variables.search(params[:q])
-         text += "\n\tVariável: " if @variables.count.positive?
+         text += "<p>Variável: " if @variables.count.positive?
         # base.variables.where(sql_query, query: "%#{params[:q]}%").each do |variable|
         @variables.each do |variable|
-          text += "\n\t -->#{variable.name} --> descrição: #{variable.description}"
+          text += "#{variable.name} --> descrição: #{variable.description}"
         end
+        text += "</p>" if @variables.count.positive?
+        text += "</div>"
         result = {
-          "id": params[:q],
+          "id": base.name,
           "text": text
         }
         results << result
