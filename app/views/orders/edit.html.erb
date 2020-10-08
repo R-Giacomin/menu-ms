@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <div class="center-content">
-  <%= link_to "Cancelar solicitação", order_path(@order), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar essa solicitação?' }, class: "btn btn-dark" %>
-  <h1>Formulário de solicitação de base de dados</h1>
+  <%= link_to "Cancelar solicitação", order_path(@order), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar essa solicitação?' }, class: "btn btn-ms" %>
+  <h1 class="mt-4">Formulário de solicitação de base de dados</h1>
   <% if @order.category == "nIdentificado" %>
     <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
   <% elsif @order.category == "identificado"%>

@@ -1,0 +1,26 @@
+﻿Nome do campo;Descrição;tipo;sensibilidade
+Numero da Declaração de Nascido Vivo;"Numero da DN;  seqüencial por UF informante e por ano";cadastral;false
+Local de Nascimento;"Local de ocorrência do nascimento; conforme a tabela: 9:   Ignorado; 1:   Hospital; 2:   Outro Estab Saude 3:   Domicilio; 4:   Outros";não cadastral;false
+Código do Estabelecimento;Código de estabelecimento;não cadastral;false
+Código Bairro nascimento;Código Bairro nascimento;não cadastral;false
+Código Município nascimento;"Município de ocorrência; em codificação idêntica a de CODMUNRES; conforme tabela TABMUN.";não cadastral;false
+Idade da mãe;Idade da mãe em anos.;não cadastral;false
+Estado Civil da mãe;"Estado civil; conforme a tabela: 1:   Solteira; 2:   Casada; 3:   Viuva; 4:   Separado judicialmente/Divorciado;  5:   União consensual (versões anteriores); 9:   Ignorado";não cadastral;false
+Escolaridade da mãe;"Escolaridade; Anos de estudo concluídos: 1:Nenhuma; 2: 1 a 3 anos; 3: 4 a 7 anos; 4: 8 a 11 anos; 5:12 e mais; 9:Ignorado";não cadastral;false
+Código de Ocupação da Mãe;"Ocupação; conforme a Classificação Brasileira de Ocupações (CBO)";não cadastral;false
+Numero de filhos vivos.;Numero de filhos vivos.;não cadastral;false
+Numero de filhos mortos;Numero de filhos mortos;não cadastral;false
+Código bairro residência;Código bairro residência;não cadastral;false
+Município de residência;"Município de residência; em codificação idêntica a de CODMUNOCOR; conforme tabela TABMUN";não cadastral;false
+Semanas de gestação;"Semanas de gestação; conforme a tabela: 9:   Ignorado; 1: Menos de 22 semanas;2: 22 a 27 semanas; 3: 28 a 31 semanas; 4: 32 a 36 semanas; 5: 37 a 41 semanas; 6: 42 semanas e mais";não cadastral;false
+GRAVIDEZ;"Tipo de gravidez; conforme a tabela: 9:   Ignorado; 1:   Única; 2:   Dupla; 3:   Trípla e mais";não cadastral;false
+PARTO;"Tipo de parto; conforme a tabela: 9:   Ignorado; 1:   Vaginal; 2:   Cesáreo ";não cadastral;false
+CONSULTAS;Número de consultas de pré-natal: 1: Nenhuma 2: de 1 a 3 3: de 4 a 6 4: 7 e mais 9: Ignorado;não cadastral;false
+Data do nascimento;"Data do nascimento; no formato ddmmaaa";não cadastral;false
+Sexo;"Sexo; conforme a tabela: 0: Ignorado; não informado 1: Masculino; 2: Feminino";não cadastral;false
+Apgar1;Apgar no primeiro minuto 00 a 10;não cadastral;false
+Apgar5;Apgar no quinto minuto 00 a 10;não cadastral;false
+Raça/cor;Raça/Cor: 1:Branca 2:Preta 3:Amarela 4: Parda 5: Indígena;não cadastral;true
+Peso;"Peso ao nascer; em gramas.";não cadastral;false
+Anomalia;"Anomalia 1=Sim; 2=Não.";não cadastral;true
+Código da Anomalia;"Código de malformação congênita ou anomalia cromossômica; de acordo com a CID-10";não cadastral;true

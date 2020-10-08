@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :autocomplete, :about_us]
-  def home; end
+  skip_before_action :authenticate_user!, only: [:home, :autocomplete, :about_us, :manager]
+
+  def home
+  end
 
   def autocomplete
     @bases = Base.search(params[:q])
@@ -31,5 +33,8 @@ class PagesController < ApplicationController
   end
 
   def about_us
+  end
+
+  def manager
   end
 end

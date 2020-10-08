@@ -1,0 +1,62 @@
+﻿Nome do campo;Descrição;tipo;sensibilidade
+Agravo/doença;Especifica a suspeição do agravo.;não cadastral;false
+Data da Investigação;Informar a data da investigação;não cadastral;false
+Ocupação/ramo de atividade econômica;"Informar a atividade exercida pelo paciente no setor formal; informal ou autônomo ou sua última atividade exercida quando paciente for desempregado. O ramo de atividade econômica do paciente refere-se as atividades econômicas desenvolvidas nos processos de produção do setor primário (agricultura e extrativismo); secundário (indústria) ou terciário (serviços e comércio)";não cadastral;false
+Sinais clínicos (Febre);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Mialgia);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Cefaleia);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Exantema);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Vômito);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Náusea);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Dor nas costas);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Conjuntivite);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Artrite);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Artralgia intensa);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Petéquias);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Leucopenia);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Prova do laço);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Sinais clínicos (Dor retroorbital);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Doenças pré- existentes (Diabetes);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+"Doenças pré-
+existentes (Doenças hematológicas)";Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Doenças pré- existentes (Hepatopatias);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+"Doenças pré- existentes (Doença
+renal crônica)";Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Doenças pré- existentes (Hipertensão arterial);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+Doenças pré- existentes (Doença ácido-péptica);Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+"Doenças pré- existentes (Doenças
+auto-imunes)";Informar qual sinal clínico ou achados laboratoriais inespecíficos;não cadastral;false
+"Exame sorológico (IgM) Chikungunya Soro 1
+Data da Coleta";Data da Coleta Exame Sorológico (IgM) Chikungunya soro 1;não cadastral;false
+"Exame sorológico (IgM) Chikungunya Soro 2
+Data da Coleta";Data da Coleta Exame Sorológico (IgM) Chikungunya soro 2;não cadastral;false
+Exame PRNT Data da Coleta;Data da Coleta Exame PRNT;não cadastral;false
+"Exame sorológico (IgM) Chikungunya Soro 1
+Resultado";Resultado do Exame Sorológico (IgM) soro 1 para Chikunugnya;não cadastral;false
+"Exame sorológico (IgM) Chikungunya Soro 2
+Resultado";Resultado do Exame Sorológico (IgM) soro 2 para Chikunugnya;não cadastral;false
+Exame PRNT Resultado;Resultado do Exame Sorológico (IgM) PRNT;não cadastral;false
+"Exame sorológico (IgM) Dengue
+Data da Coleta";Data da Coleta Exame Sorológico (IgM) Dengue;não cadastral;false
+Exame sorológico (IgM) Dengue Resultado;Resultado do Exame Sorológico (IgM) Dengue;não cadastral;false
+Exame NS1 Data da Coleta;Data da coleta Exame Sorologia ELISA;não cadastral;false
+Exame NS1 Resultado;Resultado do Exame Sorologia ELISA;não cadastral;false
+Isolamento Viral Data da Coleta;Data da Coleta Isolamento Viral;não cadastral;false
+Isolamento Viral Resultado;Resultado Exame de Isolamento Viral;não cadastral;false
+"RT-PCR
+Data da Coleta";Data de Coleta  do Exame de RT-PCR;não cadastral;false
+"RT-PCR
+Resultado";Resultado do Exame de RT-PCR;não cadastral;false
+Sorotipo;Sorotipo;não cadastral;false
+Histopatologia Resultado;Resultado Exame de Histopatologia;não cadastral;false
+Imunohistoquímica Resultado;Resultado Exame de Imunohistoquímica;não cadastral;false
+Ocorreu Hospitalização?;Informa se ocorreu hospitalização;não cadastral;false
+Data Da Internação;Informar a data de internação do paciente;não cadastral;false
+"UF De
+Hospitalização";Sigla da UF onde o paciente foi hospitalizado;não cadastral;false
+"Municipio Do
+Hospital";Código e nome  completo do município onde o paciente foi hospitalizado;não cadastral;false
+Nome Do Hospital;Nome completo da unidade de saúde em que o paciente foi notificado;não cadastral;false
+(DDD);Código DDD do telefone da unidade de saúde onde o paciente foi hospitalizado;não cadastral;false
+Telefone;Telefone da unidade de saúde onde o paciente foi hospitalizado;não cadastral;false
+O caso é Autóctone de residência?;Indica se o caso é autóctone do município de residência .;não cadastral;false
