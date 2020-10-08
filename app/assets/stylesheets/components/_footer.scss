@@ -3,11 +3,17 @@ html {
     min-height: 100%;
 }
 
-body {
-    margin: 0 0 100px;
+html,body {
+    margin: 0;
     /* bottom = footer height */
-    padding: 25px;
+    padding: 0;
 }
+
+.pageContentWrapper{
+  margin-bottom:100px;/* Height of footer*/
+}
+
+
 .footer {
   background-color: #F4F4F4;
   display: flex;
@@ -19,7 +25,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100px;
+  height: 80px;
   width: 100%;
   overflow: hidden;
 }
