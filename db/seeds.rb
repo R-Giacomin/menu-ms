@@ -56,7 +56,7 @@ manager2 = User.create!(email: "manager2@test.com",
                         manager: true )
 
 base = Base.create!(name: "E-SUS Notifica",
-                    description: "registro de notificações de casos suspeitos do Novo Coronavírus – COVID-19.",
+                    description: "O e-SUS Notifica é uma ferramenta de registro de notificações de casos suspeitos do Novo Coronavírus – COVID-19.",
                     legal_base: "Cumprimento das obrigações legais ou regulatórias, Execução de políticas públicas, Proteção da vida, Tutela da saúde, Condução de estudos e pesquisas",
                     technical_area: "Secretaria de Vigilância em Saúde",
                     periodicity: "diário",

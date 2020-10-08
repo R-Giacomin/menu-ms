@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <div class="center-content">
-  <%= link_to "Cancelar solicitação", order_path(@order), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar essa solicitação?' }, class: "btn btn-dark" %>
-  <h1>Formulário de solicitação de base de dados</h1>
+  <%= link_to "Cancelar solicitação", order_path(@order), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar essa solicitação?' }, class: "btn btn-ms" %>
+  <h1 class="mt-4">Formulário de solicitação de base de dados</h1>
   <% if @order.category == "nIdentificado" %>
     <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
   <% elsif @order.category == "identificado"%>
@@ -34,7 +34,7 @@
       <%= f.input :justify, label: 'Justificativa do pedido (informar a finalidade do uso dos dados)', placeholder: 'Justificativa para a necessidade de acesso aos dados para a realização do estudo ou pesquisa e motivos que justifiquem a necessidade da informação identificada' %>
       <%= f.input :terms, label: content_for(:the_links)%>
       <% end %>
-      <%= f.button :submit, "Salvar formulário do pedido", class: "btn btn-dark" %>
+      <%= f.button :submit, "Salvar formulário do pedido", class: "btn btn-ms" %>
       <% end%>
       <br>
       <br>

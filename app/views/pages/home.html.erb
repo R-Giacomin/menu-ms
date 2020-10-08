@@ -25,10 +25,16 @@
 
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
               <h2>O que são dados de saúde?</h2>
-              <p>São dados relativos ao seu estado de saúde,
-              que revelem informações sobre a sua saúde física ou mental,
+              <p>São dados relativos ao estado de saúde,
+              que revelem informações sobre a saúde física ou mental,
               no passado, presente ou futuro. O atendimento de qualidade requer boas
-              informações, por isso é muito importante que essas informações sejam registradas.
+              informações.
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+              <h2>Como são armazenados os dados?</h2>
+              <p>Os dados coletados em estabelecimentos de saúde são encaminhados ao Ministério da Saúde e
+              armazenados em Bases Nacionais de Dados em Saúde.
               </p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
@@ -38,12 +44,7 @@
               legítimos, específicos, explícitos e informados ao titular de dados.
               </p>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-              <h2>Onde estão meus dados de saúde?</h2>
-              <p>Dados encaminhados ao Ministério da Saúde
-              estão armazenados em Bases Nacionais de Dados em Saúde.
-              </p>
-            </div>
+
           </div>
         </div>
       </div>
@@ -72,7 +73,7 @@
           <div class="card-body">
             <h5 class="card-title">Internação Hospitalar</h5>
             <p class="card-text">Quando ficamos internado o hospital registra dados sobre nossa saúde.
-            Cada estabelecimento mantém seus próprios registros sobre você.
+            Cada estabelecimento mantém seus próprios registros.
             Alguns dados foram enviados ao Ministério da Saúde.</p>
             <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
           </div>
@@ -97,7 +98,7 @@
           <div class="card-body">
             <h5 class="card-title">Atendimento de saúde </h5>
             <p class="card-text">Informações sobre sua saúde são registradas quando recebe cuidados de saúde.
-            Cada estabelecimento de saúde mantém seus próprios registros sobre você.
+            Cada estabelecimento de saúde mantém seus próprios registros.
             Alguns dados foram enviados ao Ministério da Saúde.</p>
             <%= link_to "Conheça os dados nacionais de contatos assistenciais", bases_path(search: "cmd") %>
           </div>
@@ -122,7 +123,7 @@
           <div class="card-body">
             <h5 class="card-title">Vacinação</h5>
             <p class="card-text">Quando você recebe uma vacina, alguns dados são coletados.
-            Cada estabelecimento com a qual você tem contato mantém seus próprios registros sobre você.
+            Cada estabelecimento com a qual você tem contato mantém seus próprios registros.
             Alguns dados foram enviados ao Ministério da Saúde.</p>
             <%= link_to "Conheça os dados nacionais de imunização", bases_path(search: "vacina") %>
           </div>
@@ -138,9 +139,8 @@
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Novo coronavírus</h5>
-            <p class="card-text">As informações sobre sua saúde são registradas quando você realiza exames.
-            Cada estabelecimento com a qual você tem contato mantém seus próprios registros sobre você.
-            </p>
+            <p class="card-text">Testei positivo para o Covid. Meu resultado gerou uma notificação, ou foi
+            contabilizado para o número de casos positivos da minha região?</p>
             <br>
           </div>
         </div>
@@ -148,8 +148,9 @@
       <div class="back row">
           <div class="card-body">
             <h5 class="card-title">Novo coronavírus</h5>
-            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados ao Ministério da Saúde.</p>
-            <%= link_to "Conheça os dados nacionais de internação hospitalar", bases_path(search: "internação") %>
+            <p class="card-text">Alguns dados coletados durante a sua internação hospitalar foram enviados 
+            ao Ministério da Saúde.</p>
+            <%= link_to "Conheça os dados nacionais de notificações de COVID-19", bases_path(search: "coronavírus") %>
           </div>
       </div>
       </div>
