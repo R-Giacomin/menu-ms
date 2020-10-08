@@ -29,12 +29,12 @@
       <% end %>
 
       <%= simple_form_for @order do |f| %>
-      <%= f.input :period, label: "Período solicitado: (considere que a periodicidade da base é #{@order.base.periodicity})", placeholder: 'Ex.: de 01/2018 a 12/2018 (se a base for mensal) ou 2016 a 2018 (se a base for anual) ou apenas 2017' %>
-      <% if @order.category == "identificado" %>
-      <%= f.input :justify, label: 'Justificativa do pedido (informar a finalidade do uso dos dados)', placeholder: 'Justificativa para a necessidade de acesso aos dados para a realização do estudo ou pesquisa e motivos que justifiquem a necessidade da informação identificada' %>
-      <%= f.input :terms, label: content_for(:the_links)%>
-      <% end %>
-      <%= f.button :submit, "Salvar formulário do pedido", class: "btn btn-ms" %>
+        <%= f.input :period, label: "Período solicitado: (considere que a periodicidade da base é #{@order.base.periodicity})", placeholder: 'Ex.: de 01/2018 a 12/2018 (se a base for mensal) ou 2016 a 2018 (se a base for anual) ou apenas 2017' %>
+        <% if @order.category == "identificado" %>
+          <%= f.input :justify, label: 'Justificativa do pedido (informar a finalidade do uso dos dados)', placeholder: 'Justificativa para a necessidade de acesso aos dados para a realização do estudo ou pesquisa e motivos que justifiquem a necessidade da informação identificada' %>
+          <%= f.input :terms, label: content_for(:the_links)%>
+        <% end %>
+        <%= f.button :submit, "Concluir pedido", class: "btn btn-dark", :onclick => "return confirm('Confirma a solicitação do pedido')" %> <!-- ALTEREI -->
       <% end%>
       <br>
       <br>

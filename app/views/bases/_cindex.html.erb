@@ -8,7 +8,7 @@
 
     <div class="row">
       <% @bases.each do |base| %>
-        <div class="col-sm-6">
+        <div class="col-12">
           <div class="p-3">
             <div class="card mt-3 hoverable" style="width: 100%;">
             <%= link_to "", basis_path(base), class: 'card-link' %>
@@ -19,9 +19,9 @@
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"> <strong class="text-purple"> Base legal para tratamento de dados: </strong><%= base.legal_base %></li>
+                <li class="list-group-item"> <strong  class="text-purple"> Gestor da base: </strong><%= base.user.name %></li>
                 <li class="list-group-item "> <strong class="text-purple"> Área Técnica: </strong><%= base.technical_area %></li>
                 <li class="list-group-item "> <strong class="text-purple"> Periodicidade: </strong><%= base.periodicity %></li>
-                <li class="list-group-item"> <strong  class="text-purple"> Gestor da base: </strong><%= base.user.name %></li>
               </ul>
               <!-- <div class="card-body"> -->
 
