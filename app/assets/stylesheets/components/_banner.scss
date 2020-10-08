@@ -1,12 +1,13 @@
 .banner {
     color: white;
     text-align: center;
-    height: 400px;
+    height: 486px;
     background-size: cover;
     background-position: center;
     display: flex;
     // align-items: center;
     justify-content: center;
+    // margin-top: 32px;
   }
 
   .banner h1 {
@@ -16,15 +17,8 @@
     color: #6a2c70;
     text-align: center;
     align-items: top;
-    margin: 5.5rem;
-  }
-  .banner p {
-    font-size: 25px;
-    font-weight: lighter;
-    color: black;
-    opacity: 0.6;
-    margin-bottom: 30px;
-    text-align: center;
+    margin: 4.5rem;
+    height: 6px;
   }
 
   .btn-ms {

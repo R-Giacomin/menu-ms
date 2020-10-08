@@ -1,28 +1,28 @@
 <div class="banner" style="background-image: url('<%= image_path 'Banner.jpeg' %>')">
-  <div class="banner-content">
 
-    <h1>Meus Dados de Saúde</h1>
-    <p>
-      <span id="banner-typed-text"></span>
-    </p>
-      <div class="text-center">
+  <div class="banner-content">
+    <div class="text-center">
+        <h1>Meus Dados de Saúde</h1>
         <%= form_tag bases_path, id: "autocomplete-form", :method => "get" do %>
           <%= select_tag :search, nil,
           placeholder: "O que você procura?", class: "select2_autocomplete" %>
           <%= submit_tag("Buscar", :name => nil, class: "btn btn-ms") %>
         <% end %>
-
-      </div>
+    </div>
   </div>
+  
 </div>
 
+
 <div class="banner2">
-  <div class="container mt-5 mb-5">
-    <div class="row justify-content-center">
+
+  <div class="container mt-5 mb-5 bg-white">
+  <hr>
+    <div class="row justify-content-center  ">
 
       <div class="tab-content" id="myTabContent">
         <div class="container tab-pane fade show active" id="cidadao" role="tabpanel" aria-labelledby="cidadao-tab">
-          <div class="row">
+          <div class="row mt-3 mb-3">
 
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
               <h2>O que são dados de saúde?</h2>
@@ -32,7 +32,6 @@
               informações, por isso é muito importante que essas informações sejam registradas. 
               </p>
             </div>
-
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
               <h2>O que é tratamento de dados?</h2>
               <p>É toda operação realizada com dados pessoais de saúde,
@@ -40,7 +39,6 @@
               legítimos, específicos, explícitos e informados ao titular de dados.
               </p>
             </div>
-
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
               <h2>Onde estão meus dados de saúde?</h2>
               <p>Dados encaminhados ao Ministério da Saúde
@@ -49,10 +47,13 @@
             </div>
 
           </div>
+        <hr>
         </div>
       </div>
     </div>
+  <hr>
   </div>
+
 </div>
 
 
