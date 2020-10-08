@@ -20,12 +20,15 @@
         <% end %>
 
           <% if order.aberta? %>
-            <%= link_to 'Concluir', conclude_order_path(order),
-               data: { confirm: 'Confirma a solicitação?' }, class: "btn btn-ms" %>
-            <%= link_to 'Cancelar', cancel_order_path(order),
-               data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-ms" %>
+            <%= link_to 'Editar', edit_order_path(order), class: "btn btn-ms" %>
+            <%= link_to "Excluir", order_path(order), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar essa solicitação?' }, class: "btn btn-ms" %>
           <% end %>
-          <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-ms" %>
+          <% if order.cancelada? %>
+            <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-ms" %>
+          <% end %>
+          <% if order.concluida? %>
+            <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-ms" %>
+          <% end %>
         <hr>
       <% end %>
     </div>

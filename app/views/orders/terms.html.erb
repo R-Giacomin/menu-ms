@@ -1,41 +1,55 @@
-<%= link_to 'Voltar', :back, class: "btn btn-ms" %>
-
-<h1>TERMO DE RESPONSABILIDADE E CONFIDENCIALIDADE</h1>
-
-<p>Eu <strong><%= @order.user.name %></strong> , inscrito (a) no
-  CPF sob o nº <strong><%= @order.user.cpf %></strong> , declaro ter ciência da
-obrigatoriedade, a partir desta data, quanto ao cumprimento das
-regulamentações descritas na Política de Segurança da Informação do MS,
-instituída por meio da Portaria nº 00/0000.
-Comprometo-me ainda a cumprir o dever de salvaguardar a informação sigilosa
-e a pessoal, bem como assegurar a publicidade da informação ostensiva,
-utilizando-as, exclusivamente, para o exercício das atribuições de cargo,
-emprego ou função pública, sob pena de responsabilização administrativa,
-civil e penal.</p>
-<p>Por este termo de responsabilidade e confidencialidade, comprometo-me a:</p>
-<ol>
-  <li>Não utilizar informações sigilosa (protegida por legislação
-  específica) ou pessoal a que tiver acesso, para lograr benefício próprio
-  exclusivo e/ou unilateral, presente ou futuro, ou para o uso de terceiros.
-  Estas informações nos diversos formatos (impresso, magnético ou digital)
-  devem ser tratadas com absoluta reserva em qualquer condição e não podem
-  ser divulgadas ou dadas a conhecer a terceiros não autorizados, inclusive
-  aos próprios usuários (servidores públicos, estagiários, prestadores de
-  serviço ou terceirizados) do MS, sem a autorização do proprietário da
-  informação;
-  </li>
-  <li>Não efetuar gravação ou cópia da documentação sigilosa ou pessoal a que
-  tiver acesso para fins diversos não relativos à função ou cargo;
-  </li>
-  <li>Manter a necessária cautela quando da exibição de dados em tela,
-    impressora ou na gravação em meios eletrônicos, a fim de evitar que
-    deles venham a tomar ciência pessoas não autorizadas;
-  </li>
-  <li>Não me ausentar da estação de trabalho sem encerrar a sessão de uso
-    do navegador, bloquear estação de trabalho, garantindo assim a
-    impossibilidade de acesso indevido por terceiros;
-  </li>
-  <li>Não revelar minhas senhas a ninguém e tomar o máximo de cuidado para
-    que ela permaneça somente de meu conhecimento;
-  </li>
-</ol>
+<div class="bg-light py-5">
+  <div class="container py-5">
+    <div class="row mb-4">
+      <div>
+        <h2 class="display-6 font-weight-light ml-3 mb-5 text-lilac">TERMO DE RESPONSABILIDADE E CONFIDENCIALIDADE</h2>
+        <br>
+        <p class="ml-3 text-purple mb-5">Eu <strong><%= @order.user.name %></strong> , inscrito (a) no
+          CPF sob o nº <strong><%= @order.user.cpf %></strong> , ao receber
+          acesso à (ao) <strong><%= @order.base.name %></strong>, declaro ter ciência da
+        obrigatoriedade, a partir desta data, quanto ao cumprimento das
+        regulamentações descritas na Política de Segurança da Informação do MS,
+        instituída por meio da Portaria nº 00/0000.
+        Comprometo-me ainda a cumprir o dever de salvaguardar a informação sigilosa
+        e a pessoal, bem como assegurar a publicidade da informação ostensiva,
+        utilizando-as, exclusivamente, para o exercício das atribuições de cargo,
+        emprego ou função pública, sob pena de responsabilização administrativa,
+        civil e penal.</p>
+        <br>
+        <p class="ml-3 text-purple mb-5">Por este termo de responsabilidade e confidencialidade, comprometo-me a:</p>
+        <br>
+        <ol>
+          <li class="ml-3 text-purple mb-5">Não utilizar informações sigilosa (protegida por legislação
+          específica) ou pessoal a que tiver acesso, para lograr benefício próprio
+          exclusivo e/ou unilateral, presente ou futuro, ou para o uso de terceiros.
+          Estas informações nos diversos formatos (impresso, magnético ou digital)
+          devem ser tratadas com absoluta reserva em qualquer condição e não podem
+          ser divulgadas ou dadas a conhecer a terceiros não autorizados, inclusive
+          aos próprios usuários (servidores públicos, estagiários, prestadores de
+          serviço ou terceirizados) do MS, sem a autorização do proprietário da
+          informação;
+          </li>
+          <li class="ml-3 text-purple mb-5">Não efetuar gravação ou cópia da documentação sigilosa ou pessoal a que
+          tiver acesso para fins diversos não relativos à função ou cargo;
+          </li>
+          <li class="ml-3 text-purple mb-5">Manter a necessária cautela quando da exibição de dados em tela,
+            impressora ou na gravação em meios eletrônicos, a fim de evitar que
+            deles venham a tomar ciência pessoas não autorizadas;
+          </li>
+          <li class="ml-3 text-purple mb-5">Não me ausentar da estação de trabalho sem encerrar a sessão de uso
+            do navegador, bloquear estação de trabalho, garantindo assim a
+            impossibilidade de acesso indevido por terceiros;
+          </li>
+          <li class="ml-3 text-purple mb-5">Não revelar minhas senhas a ninguém e tomar o máximo de cuidado para
+            que ela permaneça somente de meu conhecimento;
+          </li>
+        </ol>
+        <p class="ml-3 text-purple mb-5">
+          <strong>Brasília, </strong> <span>
+            <% date_time = @order.created_at + DateTime.now.strftime('%z').to_i/100 * 60 * 60 %>
+            <%= "#{date_time.strftime("%d/%m/%Y")}" %></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

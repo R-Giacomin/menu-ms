@@ -25,7 +25,7 @@
       <hr>
 
       <%= content_for(:the_links) do %>
-      Aceitar <%= link_to "Termo de responsabilidade e responsabilidade", terms_path(@order) %>
+      Aceitar <%= link_to "Termo de responsabilidade e confidencialidade", terms_path(@order), target: :_blank %>
       <% end %>
 
       <%= simple_form_for @order do |f| %>
