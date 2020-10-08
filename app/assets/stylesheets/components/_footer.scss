@@ -1,3 +1,19 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+html,body {
+    margin: 0;
+    /* bottom = footer height */
+    padding: 0;
+}
+
+.pageContentWrapper{
+  margin-bottom:80px;/* Height of footer*/
+}
+
+
 .footer {
   background-color: #F4F4F4;
   display: flex;
@@ -6,10 +22,12 @@
   padding: 6px 30px;
   color: rgba(0,0,0,0.3);
   font-size: large;
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
+  height: 80px;
   width: 100%;
+  overflow: hidden;
 }
 
 .footer-links p {

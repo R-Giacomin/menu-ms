@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   def create
     @base = Base.find(params[:id])
     @category = params[:category]
-    @order = Order.create!(user_id: current_user.id, category: @category)
+    @order = Order.create!(user_id: current_user.id, category: @category, status: "concluida")
     if @order.category == "nIdentificado"
       @base.variables.each do |variable|
         if variable.category == "não cadastral"
