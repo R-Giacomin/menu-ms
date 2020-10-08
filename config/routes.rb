@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'my_bases', to: 'bases#my_bases'
   get 'about_us', to: 'pages#about_us'
+  get 'manager', to: 'pages#manager'
 
   resources :bases do
     resources :items, only: [:create]
