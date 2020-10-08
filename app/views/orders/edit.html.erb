@@ -1,6 +1,5 @@
 <div class="container mt-5">
   <div class="center-content">
-  <%= link_to "Cancelar solicitação", order_path(@order), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar essa solicitação?' }, class: "btn btn-ms" %>
   <h1 class="mt-4">Formulário de solicitação de base de dados</h1>
   <% if @order.category == "nIdentificado" %>
     <p><strong>Categoria do pedido: </strong>Dados não identificados</p>
@@ -34,8 +33,11 @@
           <%= f.input :justify, label: 'Justificativa do pedido (informar a finalidade do uso dos dados)', placeholder: 'Justificativa para a necessidade de acesso aos dados para a realização do estudo ou pesquisa e motivos que justifiquem a necessidade da informação identificada' %>
           <%= f.input :terms, label: content_for(:the_links)%>
         <% end %>
-        <%= f.button :submit, "Concluir pedido", class: "btn btn-dark", :onclick => "return confirm('Confirma a solicitação do pedido')" %> <!-- ALTEREI -->
+        <div class="col">
+        <%= f.button :submit, "Concluir pedido", class: "btn btn-ms", :onclick => "return confirm('Confirma a solicitação do pedido')" %> <!-- ALTEREI -->
       <% end%>
+      <%= link_to "Cancelar", order_path(@order), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar essa solicitação?' }, class: "btn btn-ms" %>
+        </div>
       <br>
       <br>
       <h5><strong>Campos solicitados</strong></h5>
