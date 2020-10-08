@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   def create
     @base = Base.find(params[:id])
     @category = params[:category]
-    @order = Order.create!(user_id: current_user.id, category: @category, status: "concluida")
+    @order = Order.create!(user_id: current_user.id, category: @category)
     if @order.category == "nIdentificado"
       @base.variables.each do |variable|
         if variable.category == "não cadastral"
@@ -36,7 +36,8 @@ class OrdersController < ApplicationController
       redirect_to root_path, alert: 'Não autorizado'
     else
       if @order.update(strong_params)
-        redirect_to orders_path, notice: 'Pedido atualizado.'
+        # redirect_to orders_path, notice: 'Pedido atualizado.'
+        conclude_order
       else
         render :edit
       end
@@ -54,7 +55,7 @@ class OrdersController < ApplicationController
 
   def conclude_order
     @order.concluida!
-    redirect_to orders_path
+    redirect_to orders_path, notice: 'Pedido atualizado.'
   end
 
   def cancel_order

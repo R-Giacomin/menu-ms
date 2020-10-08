@@ -4,9 +4,9 @@
     <div class="col">
       <% @orders.sort.reverse.each do |order| %>
         <p>
-          <strong>Pedido código </strong> <span Style="color:darkred">
+          <strong>Pedido </strong> <span Style="color:darkred">
             <% date_time = order.created_at + DateTime.now.strftime('%z').to_i/100 * 60 * 60 %>
-            <%= "#{order.id} de #{date_time.strftime("%d/%m/%Y às %H:%M")}" %></span>
+            <%= "00#{order.user.id}00#{order.id} de #{date_time.strftime("%d/%m/%Y às %H:%M")}" %></span>
         </p>
         <h4>
           <strong>Nome da Base: </strong><%= order.base.name if order.items.count.positive? %></h4>
@@ -28,6 +28,8 @@
           <% end %>
           <% if order.concluida? %>
             <%= link_to 'Mostrar Pedido', order_path(order), class: "btn btn-ms" %>
+            <%= link_to 'Cancelar', cancel_order_path(order),
+              data: { confirm: 'Confirma o cancelamento?' }, class: "btn btn-ms" %>
           <% end %>
         <hr>
       <% end %>
