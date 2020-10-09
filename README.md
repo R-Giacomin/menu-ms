@@ -9,19 +9,19 @@
 
 ## Desenvolvedores:
 
-#### Rafael Luís Giacomin
+- #### Rafael Luís Giacomin
 *ANALISTA DE PLANEJAMENTO E ORÇAMENTO*
 *MINISTÉRIO DA ECONOMIA*
 
-#### Gabriella Nunes Neves
+- #### Gabriella Nunes Neves
 *ANALISTA TÉCNICA DE POLÍTICAS SOCIAIS*
 *MINISTÉRIO DA SAÚDE*
 
-#### Marcos Teixeira Camara
+- #### Marcos Teixeira Camara
 *AUDITOR FISCAL DA RECEITA FEDERAL DO BRASIL*
 *MINISTÉRIO DA ECONOMIA*
 
-#### Fabiana Barreiros da Silva
+- #### Fabiana Barreiros da Silva
 *ANALISTA-TRIBUTÁRIO DA RECEITA FEDERAL DO BRASIL*
 *MINISTÉRIO DA ECONOMIA*
 
