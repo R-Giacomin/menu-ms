@@ -4,7 +4,7 @@
 
 ## Acesse a aplicação:  [MS-Saúde](https://menu-ms.herokuapp.com/)
 
-## *Aplicação desenvolvivida por alunos da primeira turma do Coding Bootcamp Le Wagon e ENAP.*
+## *Aplicação desenvolvida por alunos da primeira turma do Coding Bootcamp Le Wagon e ENAP.*
 ## *Turma Batch 455*
 
 ## Desenvolvedores:
