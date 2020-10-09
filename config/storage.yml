@@ -1,18 +1,6 @@
-cloudinary_defaults: &cloudinary_defaults
+# config/storage.yml
+cloudinary:
   service: Cloudinary
-  secure: true
-cloudinary_test:
-  tags:
-    - test
-  <<: *cloudinary_defaults
-cloudinary_development:
-  tags:
-    - development
-  <<: *cloudinary_defaults
-cloudinary_production:
-  tags:
-    - production
-  <<: *cloudinary_defaults
 
 
 # test:
