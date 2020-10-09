@@ -10,14 +10,14 @@ Base.destroy_all
 User.destroy_all
 
 admin = User.create!(email: "admin@admin.com",
-                    password: '123456',
-                    name: Faker::Name.name,
+                    password: '654321',
+                    name: "Rafael Giacomin",
                     cpf: Faker::CPF.numeric,
                     admin: true )
 
 manager1 = User.create!(email: "manager1@test.com",
                         password: '123456',
-                        name: Faker::Name.name,
+                        name: "Fabiana Barreiros da Silva",
                         cpf: Faker::CPF.numeric,
                         manager: true )
 
@@ -51,7 +51,7 @@ end
 
 manager2 = User.create!(email: "manager2@test.com",
                         password: '123456',
-                        name: Faker::Name.name,
+                        name: "Marcos Teixeira Camara",
                         cpf: Faker::CPF.numeric,
                         manager: true )
 
@@ -99,12 +99,12 @@ end
 
 base = Base.create!(name: "Base Nacional do Sinan Dengue/Chikungunya (SINAN)",
   description: "O Sistema de Informação de Agravos de Notificação online (Sinan Online) tem por objetivo a inserção
-  e disseminação dos dados de agravos de notificação compulsória nas três esferas de governo em tempo real fornecendo 
-  dados de forma rápida e íntegra para análise e tomada de decisões. O sistema tem por atribuições a coleta, 
-  a transmissão e a disseminação de dados gerados rotineiramente fornecendo informações para análise do perfil da 
-  morbidade da população. O sistema foi desenvolvido para trabalhar em conjunto com o Sinan Net, enquanto todos os 
-  agravos não estiverem disponíveis na versão online. O sistema permite, ainda, a exportação de dados, em formato 
-  DBASE, para tabulação de dados em outros softwares de domínio público. A versão 3.0 do sistema, lançada oficialmente 
+  e disseminação dos dados de agravos de notificação compulsória nas três esferas de governo em tempo real fornecendo
+  dados de forma rápida e íntegra para análise e tomada de decisões. O sistema tem por atribuições a coleta,
+  a transmissão e a disseminação de dados gerados rotineiramente fornecendo informações para análise do perfil da
+  morbidade da população. O sistema foi desenvolvido para trabalhar em conjunto com o Sinan Net, enquanto todos os
+  agravos não estiverem disponíveis na versão online. O sistema permite, ainda, a exportação de dados, em formato
+  DBASE, para tabulação de dados em outros softwares de domínio público. A versão 3.0 do sistema, lançada oficialmente
   no dia 10/05/2016, contempla também o agravo Febre de Chikungunya.",
   legal_base: "Cumprimento das obrigações legais ou regulatórias, Execução de políticas públicas, Proteção da vida, Tutela da saúde, Condução de estudos e pesquisas",
   technical_area: "Secretaria de Vigilância em Saúde",
@@ -120,11 +120,11 @@ end
 
 base = Base.create!(name: "Base Nacional do Sinan Tuberculose (SINAN)",
   description: "O Sistema de Informação de Agravos de Notificação online (Sinan Online) tem por objetivo a inserção
-  e disseminação dos dados de agravos de notificação compulsória nas três esferas de governo em tempo real fornecendo 
-  dados de forma rápida e íntegra para análise e tomada de decisões. O sistema tem por atribuições a coleta, 
-  a transmissão e a disseminação de dados gerados rotineiramente fornecendo informações para análise do perfil da 
-  morbidade da população. O sistema foi desenvolvido para trabalhar em conjunto com o Sinan Net, enquanto todos os 
-  agravos não estiverem disponíveis na versão online. O sistema permite, ainda, a exportação de dados, em formato 
+  e disseminação dos dados de agravos de notificação compulsória nas três esferas de governo em tempo real fornecendo
+  dados de forma rápida e íntegra para análise e tomada de decisões. O sistema tem por atribuições a coleta,
+  a transmissão e a disseminação de dados gerados rotineiramente fornecendo informações para análise do perfil da
+  morbidade da população. O sistema foi desenvolvido para trabalhar em conjunto com o Sinan Net, enquanto todos os
+  agravos não estiverem disponíveis na versão online. O sistema permite, ainda, a exportação de dados, em formato
   DBASE, para tabulação de dados em outros softwares de domínio público.",
   legal_base: "Cumprimento das obrigações legais ou regulatórias, Execução de políticas públicas, Proteção da vida, Tutela da saúde, Condução de estudos e pesquisas",
   technical_area: "Secretaria de Vigilância em Saúde",
